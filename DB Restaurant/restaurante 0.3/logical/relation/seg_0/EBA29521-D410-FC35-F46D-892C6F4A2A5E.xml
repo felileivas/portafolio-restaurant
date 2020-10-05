@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="insumo_receta" directorySegmentName="seg_0" id="EBA29521-D410-FC35-F46D-892C6F4A2A5E">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:12:41 UTC</createdTime>
+<ownerDesignName>restaurante 0.3</ownerDesignName>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<sourcePk>31131256-D88D-B2BF-0E54-C10AB7F87899</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9965D581-952E-CA01-BCD8-AE1AE49A3D7B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>11356BC2-6166-EFD0-6CB6-B1A46AD973EE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="restaurante" id="ACB8394C-9263-D565-5A1B-E52F5A00ACE2" version="3.5">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 21:02:10 UTC</createdTime>
+<ownerDesignName>restaurante</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>ACB8394C-9263-D565-5A1B-E52F5A00ACE2</designId>
+</OSDM_Design>

@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="99DA2DCB-C06C-D698-A939-2570AF591BA0" name="Mesa">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.3</ownerDesignName>
+<importedID>CE7920EB-F284-2EDC-5A82-1E6CFB6FD497</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Mesa" id="0AE2EFE7-4CAF-B96E-900A-2B59BFB11B8E">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.3</ownerDesignName>
+<importedID>50FD61DC-C968-1FC8-09BB-FF62EBCFAA57</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Capacidad" id="814B9DD2-B160-6C6C-0744-D82C161A3B3D">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.3</ownerDesignName>
+<importedID>D06FE067-911C-AB4E-82E3-307822B50001</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Sector" id="5D83C488-1762-4D8A-18D0-F287C6AEC345">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.3</ownerDesignName>
+<importedID>83BDF04F-EA1E-A1DC-17B8-23F61F1A66BF</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Estado" id="3FEE5426-BB1E-B155-DAFA-598DED619A20">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.3</ownerDesignName>
+<importedID>AA13F305-4BCF-EC97-F8A0-2111E5E223F5</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5AB37328-57C1-91EB-239B-4F1420FCCAA1" name="Mesa PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.3</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<importedID>6EE13798-1D30-E6B6-460F-AC70A8B33127</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0AE2EFE7-4CAF-B96E-900A-2B59BFB11B8E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

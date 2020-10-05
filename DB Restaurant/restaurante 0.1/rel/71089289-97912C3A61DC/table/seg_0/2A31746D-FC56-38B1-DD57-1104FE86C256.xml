@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2A31746D-FC56-38B1-DD57-1104FE86C256" name="Reserva">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 23:07:15 UTC</createdTime>
+<generatorID>8193906B-1253-DDB9-8468-9897B461449D</generatorID>
+<ownerDesignName>restaurante 0.1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Reserva" id="4C6292A8-4E87-65A9-53CB-9B77A4D80CF3">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 23:07:15 UTC</createdTime>
+<generatorID>5FE092D5-C773-B1B0-2E14-5E8746754DCD</generatorID>
+<ownerDesignName>restaurante 0.1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha" id="A6C9B05C-CD30-74D7-3BFB-DEFDE3353B08">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 23:07:15 UTC</createdTime>
+<generatorID>86D325E7-934B-761C-67ED-40C2C27CFB64</generatorID>
+<ownerDesignName>restaurante 0.1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CA36AE8C-81EC-A580-8D18-D0B0320F4154" name="Reserva_PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 23:07:15 UTC</createdTime>
+<generatorID>8A5921BC-900B-2A15-DD61-A53CE5F1B8CC</generatorID>
+<ownerDesignName>restaurante 0.1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C6292A8-4E87-65A9-53CB-9B77A4D80CF3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

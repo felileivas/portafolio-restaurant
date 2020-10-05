@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="reserva_mesa" directorySegmentName="seg_0" id="198E29C4-C51B-1D82-1E51-E7E4E837F023">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 23:06:41 UTC</createdTime>
+<ownerDesignName>restaurante 0.1</ownerDesignName>
+<importedID>69682F8E-FA0D-BB98-1D83-09E5A12E80ED</importedID>
+<engineerTo>
+<item key="71089289-01D1-C1BE-978E-97912C3A61DC" value="true"/>
+</engineerTo>
+<sourcePk>8A5921BC-900B-2A15-DD61-A53CE5F1B8CC</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8193906B-1253-DDB9-8468-9897B461449D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>CE7920EB-F284-2EDC-5A82-1E6CFB6FD497</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

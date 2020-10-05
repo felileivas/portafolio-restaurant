@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8B57CD37-F740-1295-FFD4-0D8496A8B224" name="Boleta_log">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:55 UTC</createdTime>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<importedID>42439756-3E43-6786-A6F7-9ECA5C875AF7</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Boleta" id="5AB5CE96-7676-2ECA-CBDC-3843458E99A2">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<importedID>B39AFDCE-A3D0-C1F2-6C9A-44C31938D5CC</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fecha" id="F0766DE6-446B-0ED9-48A8-CE5FE161B99E">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<importedID>E5C14DF3-DD84-EDB5-9686-39DB2C8EDAB9</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MontoTotal" id="A7A482EF-5B9D-3F98-D732-EBF79427600D">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<importedID>8B48BFC3-2786-3300-6C76-551A0292C987</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DDAE9618-8249-4A61-C053-2BD492E58CED" name="Boleta_log PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<importedID>9F74364B-20BC-3432-CDDD-9035E3E993D3</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5AB5CE96-7676-2ECA-CBDC-3843458E99A2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

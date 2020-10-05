@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="956F0F0A-D0A7-47E6-1A27-FBB1FB372512" name="Boleta_log">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 21:32:12 UTC</createdTime>
+<generatorID>BF29C855-A369-B5AF-D0F9-5E2C47DB221B</generatorID>
+<ownerDesignName>restaurante</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Boleta" id="025AF3DB-074F-6BD2-AF32-1BE0179E8B0F">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 21:32:12 UTC</createdTime>
+<generatorID>1C11DC8F-A209-54A1-FD4D-F03F50648ADB</generatorID>
+<ownerDesignName>restaurante</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha" id="6F4B4546-73F8-0D13-F731-2FCFE7AEB644">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 21:32:12 UTC</createdTime>
+<generatorID>AE154712-0EFA-67FE-90CD-266C468B3F06</generatorID>
+<ownerDesignName>restaurante</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MontoTotal" id="BCEB4B54-2995-6BF8-7196-D1E8C3FBA682">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 21:32:12 UTC</createdTime>
+<generatorID>905D01DB-1779-6805-3F99-0747BFD455E0</generatorID>
+<ownerDesignName>restaurante</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A1A0D80A-7354-4F1A-9D05-7B2472196247" name="Boleta_log_PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 21:32:12 UTC</createdTime>
+<generatorID>680802A6-91E7-A3C6-DB87-0C8CD146D1B3</generatorID>
+<ownerDesignName>restaurante</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="025AF3DB-074F-6BD2-AF32-1BE0179E8B0F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B35CA745-B251-4FCD-6237-0E8EA65AED6C" name="Insumo">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 21:32:12 UTC</createdTime>
+<generatorID>0E1BBF53-9F3E-A872-604D-0C329F491E02</generatorID>
+<ownerDesignName>restaurante</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Insumo" id="3A134FBC-28C0-24FA-97AC-3BB3D6B63BF9">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 21:32:12 UTC</createdTime>
+<generatorID>53F026E4-DC2E-1BEB-B1F2-2FF1652F5768</generatorID>
+<ownerDesignName>restaurante</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo" id="BF78A9E7-42A6-4780-DAF3-05F8B0137450">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 21:32:12 UTC</createdTime>
+<generatorID>1C418761-AED3-A683-E045-40BFCB51A90A</generatorID>
+<ownerDesignName>restaurante</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cantidad" id="0671F20C-BD38-E99E-75EF-3819F458D4E8">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 21:32:12 UTC</createdTime>
+<generatorID>2E698C6F-9F61-D74F-2594-2E88A7D2BC13</generatorID>
+<ownerDesignName>restaurante</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Receta_ID_Receta" id="C7FAB152-A3AF-4EE4-207E-F65F26E9FA1B">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 21:32:12 UTC</createdTime>
+<generatorID>FCB5DFA3-7C83-1ED0-EA2E-3C1B6D81185F</generatorID>
+<ownerDesignName>restaurante</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6CD1D21A-47FA-E830-6A1E-1CA070E93800" referredColumn="80807B5B-CEAE-8AFB-525F-0D49A8845376"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="91DCAA07-EFA3-7CF8-4DCC-4E4E6ED44FE9" name="Insumo_PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 21:32:12 UTC</createdTime>
+<generatorID>C27A6E11-2D97-5085-76D5-41B2593864E6</generatorID>
+<ownerDesignName>restaurante</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3A134FBC-28C0-24FA-97AC-3BB3D6B63BF9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E1249DAD-8421-1A35-AF5F-17E8DD9000D8" name="Insumo_Receta_FK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 21:32:12 UTC</createdTime>
+<generatorID>2F1E7DD7-E9CF-C765-7301-EB3ED88463B4</generatorID>
+<ownerDesignName>restaurante</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7FAB152-A3AF-4EE4-207E-F65F26E9FA1B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,67 @@
+
+INSERT INTO "MYRESTAURANT"."RESERVA" (ID_RESERVA, FECHA) VALUES ('1', TO_DATE('2020-10-03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
+
+Confirmación Correcta
+
+
+INSERT INTO "MYRESTAURANT"."MESA" (ID_MESA, CAPACIDAD, SECTOR, ESTADO, RESERVA_ID_RESERVA) VALUES ('1', '4', 'terraza', '1', '1')
+
+Confirmación Correcta
+
+
+INSERT INTO "MYRESTAURANT"."USUARIO" (ID_USUARIO, NOMBRE, CORREO, CONTRASENNA, RESERVA_ID_RESERVA) VALUES ('1', 'Felipe Leiva', 'felipe@cliente.cl', 'root', '1')
+
+Confirmación Correcta
+
+
+INSERT INTO "MYRESTAURANT"."RECETA" (ID_RECETA, NOMBRE, COSTO, ESTADO) VALUES ('1', 'Hamburgesa', '5000', '1')
+
+Confirmación Correcta
+
+
+INSERT INTO "MYRESTAURANT"."MESERO" (ID_MESERO, NOMBRE, CORREO, CONTRASENNA) VALUES ('1', 'Juan Pablo', 'jp@mesero.cl', 'toor')
+
+Confirmación Correcta
+
+
+INSERT INTO "MYRESTAURANT"."INSUMO" (ID_INSUMO, TIPO, CANTIDAD, RECETA_ID_RECETA) VALUES ('1', 'pan', '10', '1')
+
+Confirmación Correcta
+
+
+INSERT INTO "MYRESTAURANT"."BOLETA" (ID_BOLETA, FECHA, MONTOTOTAL, MEDIOPAGO_ID_MEDIOPAGO) VALUES ('1', TO_DATE('2020-10-03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), '5000', '1')
+ORA-02291: restricción de integridad (MYRESTAURANT.BOLETA_MEDIOPAGO_FK) violada - clave principal no encontrada
+ORA-06512: en línea 1
+
+
+Se ha producido un error al guardar los cambios en la tabla "MYRESTAURANT"."BOLETA":
+Fila 1: ORA-02291: restricción de integridad (MYRESTAURANT.BOLETA_MEDIOPAGO_FK) violada - clave principal no encontrada
+ORA-06512: en línea 1
+
+Tarea Cancelada: 
+INSERT INTO "MYRESTAURANT"."MEDIOPAGO" (ID_MEDIOPAGO, NOMBRE, ESTADO) VALUES ('1', 'Efectivo', '1')
+INSERT INTO "MYRESTAURANT"."MEDIOPAGO" (ID_MEDIOPAGO, NOMBRE, ESTADO) VALUES ('2', 'Tarjeta debito', '1')
+INSERT INTO "MYRESTAURANT"."MEDIOPAGO" (ID_MEDIOPAGO, NOMBRE, ESTADO) VALUES ('3', 'Tarjeta Credito', '1')
+
+Confirmación Correcta
+
+
+INSERT INTO "MYRESTAURANT"."BOLETA" (ID_BOLETA, FECHA, MONTOTOTAL, MEDIOPAGO_ID_MEDIOPAGO) VALUES ('1', TO_DATE('2020-10-03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), '5000', '2')
+
+Confirmación Correcta
+
+
+INSERT INTO "MYRESTAURANT"."INSUMO" (ID_INSUMO, TIPO, CANTIDAD, RECETA_ID_RECETA) VALUES ('2', 'hamburgesa carne', '10', '1')
+
+Confirmación Correcta
+
+
+INSERT INTO "MYRESTAURANT"."INSUMO" (ID_INSUMO, TIPO, CANTIDAD, RECETA_ID_RECETA) VALUES ('3', 'pepinillos', '10', '1')
+
+Confirmación Correcta
+
+
+INSERT INTO "MYRESTAURANT"."PEDIDO" (ID_PEDIDO, FECHA, COMENTARIO, BOLETA_ID_BOLETA, USUARIO_ID_USUARIO, MESERO_ID_MESERO, RECETA_ID_RECETA) VALUES ('1', TO_DATE('2020-10-03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'hamburgesa sin pepinillo', '1', '1', '1', '1')
+
+Confirmación Correcta
+
