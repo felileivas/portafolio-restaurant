@@ -1,3 +1,8 @@
-create user restaurant identified by qazxsw2134e;
+alter session set "_oracle_script"=true;
 
-GRANT CONNECT, RESOURCE, DBA TO restaurant;
+create user #restaurantXXI identified by qazxsw2134e;
+
+GRANT CONNECT, RESOURCE, DBA TO restaurantXXI;
+
+--DROP USER myrestaurant cascade;
+
