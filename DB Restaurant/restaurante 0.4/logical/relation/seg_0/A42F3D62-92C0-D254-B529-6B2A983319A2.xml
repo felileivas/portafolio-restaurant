@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Boleta MedioPago FK" directorySegmentName="seg_0" id="A42F3D62-92C0-D254-B529-6B2A983319A2">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 16:28:40 UTC</createdTime>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<importedID>80E6C03A-492B-52CD-EE11-F483F20C1C20</importedID>
+<engineerTo>
+<item key="C59809FE-412C-520D-3910-708F7CE7DC72" value="true"/>
+</engineerTo>
+<sourcePk>A56FAED3-204A-9F31-49DC-93BA2C0E158F</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>EB2331C1-CDC4-9969-63CB-70FD81A15B45</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7BAF8ADF-4287-A13D-761D-4A584CF68E20</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
