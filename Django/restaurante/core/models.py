@@ -11,9 +11,9 @@ from django.db import models
 class Boleta(models.Model):
     id_boleta = models.AutoField(primary_key=True)
     fecha = models.DateField()
-    montototal = models.FloatField()
-    mediopago_id_mediopago = models.ForeignKey('Mediopago', models.DO_NOTHING, db_column='mediopago_id_mediopago')
-    pedido_id_pedido = models.ForeignKey('Pedido', models.DO_NOTHING, db_column='pedido_id_pedido')
+    montototal = models.FloatField(verbose_name='Monto Total')
+    mediopago_id_mediopago = models.ForeignKey('Mediopago', models.DO_NOTHING, db_column='mediopago_id_mediopago', verbose_name='Medio de pago')
+    pedido_id_pedido = models.ForeignKey('Pedido', models.DO_NOTHING, db_column='pedido_id_pedido', verbose_name='Pedido')
 
     class Meta:
         managed = False
@@ -38,7 +38,7 @@ class Insumo(models.Model):
         verbose_name = 'Insumo'
         verbose_name_plural = 'Insumos'
     def __str__(self):
-        return 'ID: {} - Nombre: {}'.format(self.id_insumo, self.nombre)
+        return '{}'.format(self.nombre)
 
 
 class Mediopago(models.Model):
@@ -68,7 +68,7 @@ class Mesa(models.Model):
         verbose_name_plural = 'Mesas'
 
     def __str__(self):
-        return 'ID: {} - Sector: {} - Capacidad: {}'.format(self.id_mesa, self.sector, self.capacidad)
+        return '{}'.format(self.sector)
 
 
 
@@ -91,15 +91,16 @@ class Pedido(models.Model):
     id_pedido = models.AutoField(primary_key=True)
     fecha = models.DateField()
     comentario = models.CharField(max_length=50, blank=True, null=True)
-    mesero_id_mesero = models.ForeignKey(Mesero, models.DO_NOTHING, db_column='mesero_id_mesero')
-    reserva_id_reserva = models.ForeignKey('Reserva', models.DO_NOTHING, db_column='reserva_id_reserva')
-    preparacion_id_preparacion = models.ForeignKey('Preparacion', models.DO_NOTHING, db_column='preparacion_id_preparacion')
+    mesero_id_mesero = models.ForeignKey(Mesero, models.DO_NOTHING, db_column='mesero_id_mesero', verbose_name='Mesero')
+    reserva_id_reserva = models.ForeignKey('Reserva', models.DO_NOTHING, db_column='reserva_id_reserva', verbose_name='Reserva')
+    preparacion_id_preparacion = models.ForeignKey('Preparacion', models.DO_NOTHING, db_column='preparacion_id_preparacion', verbose_name='Preparacion')
 
     class Meta:
         managed = False
         db_table = 'pedido'
         verbose_name = 'Pedido'
         verbose_name_plural = 'Pedidos'
+        ordering = ['-fecha']
     def __str__(self):
         return '{}'.format(self.reserva_id_reserva)
 
@@ -115,6 +116,7 @@ class Preparacion(models.Model):
         db_table = 'preparacion'
         verbose_name = 'Preparacion'
         verbose_name_plural = 'Preparaciones'
+        ordering = ['id_preparacion']
     def __str__(self):
         return '{}'.format(self.nombre)
 
@@ -122,23 +124,23 @@ class Preparacion(models.Model):
 
 class Receta(models.Model):
     id_receta = models.AutoField(primary_key=True)
-    insumo_id_insumo = models.ForeignKey(Insumo, models.DO_NOTHING, db_column='insumo_id_insumo')
-    preparacion_id_preparacion = models.ForeignKey(Preparacion, models.DO_NOTHING, db_column='preparacion_id_preparacion')
+    insumo_id_insumo = models.ForeignKey(Insumo, models.DO_NOTHING, db_column='insumo_id_insumo', verbose_name='Ingrediente')
+    preparacion_id_preparacion = models.ForeignKey(Preparacion, models.DO_NOTHING, db_column='preparacion_id_preparacion', verbose_name='Receta')
 
     class Meta:
         managed = False
         db_table = 'receta'
         verbose_name = 'Receta'
         verbose_name_plural = 'Recetas'
-    def __str__(self):
-        return '{}'.format( self.preparacion_id_preparacion)
+    #def __str__(self):
+    #    return '{}'.format( self.preparacion_id_preparacion)
 
 
 class Reserva(models.Model):
     id_reserva = models.AutoField(primary_key=True)
     fecha = models.DateField()
-    mesa_id_mesa = models.ForeignKey(Mesa, models.DO_NOTHING, db_column='mesa_id_mesa')
-    usuario_id_usuario = models.ForeignKey('Usuario', models.DO_NOTHING, db_column='usuario_id_usuario')
+    mesa_id_mesa = models.ForeignKey(Mesa, models.DO_NOTHING, db_column='mesa_id_mesa', verbose_name='Mesa')
+    usuario_id_usuario = models.ForeignKey('Usuario', models.DO_NOTHING, db_column='usuario_id_usuario', verbose_name='Cliente')
 
     class Meta:
         managed = False
@@ -146,7 +148,7 @@ class Reserva(models.Model):
         verbose_name = 'Reserva'
         verbose_name_plural = 'Reservas'
     def __str__(self):
-        return '{} {} {}'.format(self.fecha, self.mesa_id_mesa, self.usuario_id_usuario)
+        return '{} {} - {}'.format(self.fecha, self.mesa_id_mesa, self.usuario_id_usuario)
 
 
 

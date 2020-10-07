@@ -3,4 +3,5 @@ from django.apps import AppConfig
 
 class CoreConfig(AppConfig):
     name = 'core'
-    verbose_name = 'Restaurant XXI'
+    verbose_name = 'Restaurant Siglo XXI'
+
