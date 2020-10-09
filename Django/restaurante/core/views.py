@@ -27,39 +27,39 @@ EmitirBoleta boleta/
 """
 
 def home(request):
-    return HttpResponse("Home")
+    return render(request, "core/home.html")
 
 def login(request):
     return render(request, "core/login.html")
 
 #Cliente
 def reserva(request):
-    return HttpResponse("Reserva")
+    return render(request, "core/reserva.html")
 
 def pagar(request):
-    return HttpResponse("Pagar")
+    return render(request, "core/pagar.html")
 
 def pedirorden(request):
-    return HttpResponse("Pedir Orden")
+    return render(request, "core/pedirorden.html")
 
 #Recepcion
 def asignarmesa(request):
-    return HttpResponse("Asignar Mesa")
+    return render(request, "core/mesas.html")
 
 #Cocina
 def pedidos(request):
-    return HttpResponse("Lista de Pedidos")
+    return render(request, "core/pedidos.html")
 
 def recetas(request):
-    return HttpResponse("Ingresar Recetas")
+    return render(request, "core/recetas.html")
 
 #Bodega
 def insumos(request):
-    return HttpResponse("Insumos")
+    return render(request, "core/insumos.html")
 
 #Finanzas
 def ganancias(request):
-    return HttpResponse("Calcular Ganancias")
+    return render(request, "core/ganancias.html")
 
 def boleta(request):
-    return HttpResponse("Emitir Boleta")
+    return render(request, "core/boletas.html")
