@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="063D7B56-94D9-DFAC-BC60-DD6164044CD2" name="Insumo">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>866392C6-B1BA-8A84-260A-8B015D0C7B13</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Insumo" id="241BF781-BECD-89A5-62BB-4C060BB8C886">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>747CF256-C438-93BC-E949-8CB73E5F7BAF</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="B48D832E-EF93-15D2-8E2B-D1DB684D48B3">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>72C38BCE-8A9F-DF46-0AC3-8AC158834600</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo" id="989C6A85-544F-98FE-82D2-BD8A6CA45114">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>D7F8AE05-833A-8DE1-83E4-3FDA5EF0D161</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cantidad" id="418809D7-3640-EFD7-D6E8-C87A4B13D760">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>C1D61BFD-44FF-D35A-808E-3C7A56292FBA</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Trabajador_ID_Trabajador" id="6EBC8C00-BF4B-1E5D-1BCE-7656A456BF00">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>E427F109-A67B-1416-6928-6D13C249CF4C</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6F65857B-03BA-01D7-A549-7A281BA065FD" referredColumn="A72C7704-9D9A-0B87-231D-7C700E1E9091"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7AE84224-3D08-000F-4A10-DD691C8936C1" name="Insumo_PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>51845EBB-DE6E-A613-767D-D3B0102FD95D</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="241BF781-BECD-89A5-62BB-4C060BB8C886"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3F5766C8-FE41-E79D-31A9-829FD0981B9C" name="Insumo_Trabajador_FK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>586DA49E-CC86-0E72-9DE3-3360F4E009F8</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6EBC8C00-BF4B-1E5D-1BCE-7656A456BF00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

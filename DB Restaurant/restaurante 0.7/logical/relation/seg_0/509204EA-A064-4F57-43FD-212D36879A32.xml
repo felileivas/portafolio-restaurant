@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Receta Preparacion FK" directorySegmentName="seg_0" id="509204EA-A064-4F57-43FD-212D36879A32">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:19:44 UTC</createdTime>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<importedID>25E0902F-F08D-5888-280F-0A9022DEE109</importedID>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<sourcePk>100FDFA7-AA5D-5CB1-970D-0541EC7E2D7F</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F56CA8D3-F726-669D-2348-C45B1B676EE7</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>001E11E8-249E-6EF6-6821-5DD925226A99</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

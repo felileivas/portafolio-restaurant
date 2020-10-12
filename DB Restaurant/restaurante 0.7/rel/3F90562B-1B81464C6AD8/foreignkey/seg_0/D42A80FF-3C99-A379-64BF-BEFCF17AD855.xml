@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D42A80FF-3C99-A379-64BF-BEFCF17AD855" containerWithKeyObject="8A44F329-9FF0-0FB2-FA31-F76F7B34D95E" localFKIndex="B0FEC94C-AE13-DBDA-F6DA-4B8EBF022AAF" name="Boleta_Pedido_FK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>2DE6B1E6-CE56-5DAE-1BC7-DCFE903EFF71</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<referredTableLongName>Pedido</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8586ED0B-4E9F-2EFA-06F2-6C5A34B8A98C</referredTableID>
+<keyObject>72075D0B-0A0C-3736-2424-7B615A08EBA5</keyObject>
+<referredKeyID>72075D0B-0A0C-3736-2424-7B615A08EBA5</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Pedido</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
