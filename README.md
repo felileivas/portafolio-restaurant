@@ -10,3 +10,5 @@ portafolio-restaurant
     python manage.py migrate
 
     python manage.py inspectdb
+    
+    conda env create -f restaurant.yml
