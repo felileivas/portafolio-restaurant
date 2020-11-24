@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="mediopago_boleta" directorySegmentName="seg_0" id="DEB43FC9-38CC-87BB-4C23-EE2501D79AD0">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 23:06:41 UTC</createdTime>
+<ownerDesignName>restaurante 0.1</ownerDesignName>
+<importedID>7BF09A85-CBA9-3EB1-04AA-63B1A538CFC9</importedID>
+<engineerTo>
+<item key="71089289-01D1-C1BE-978E-97912C3A61DC" value="true"/>
+</engineerTo>
+<sourcePk>1A64511C-5D97-366D-8F47-5F540110BA7D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>94034858-6963-ED63-DDA7-70257345BB1E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A8026187-F2D9-CFF0-6461-6143DCEF59EE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

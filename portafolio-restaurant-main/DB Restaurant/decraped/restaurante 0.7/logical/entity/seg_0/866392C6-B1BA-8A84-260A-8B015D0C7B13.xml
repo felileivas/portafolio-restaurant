@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="866392C6-B1BA-8A84-260A-8B015D0C7B13" name="Insumo">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:19:44 UTC</createdTime>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<importedID>405BA9F5-E5DB-8461-F453-C98BD56A0CAD</importedID>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID Insumo" id="747CF256-C438-93BC-E949-8CB73E5F7BAF">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:19:44 UTC</createdTime>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<importedID>6FD886F0-2F49-82A0-AB35-8F333BF6A151</importedID>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre" id="72C38BCE-8A9F-DF46-0AC3-8AC158834600">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:19:44 UTC</createdTime>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<importedID>1B56510F-D184-5BB6-F347-5B2F194107CA</importedID>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Tipo" id="D7F8AE05-833A-8DE1-83E4-3FDA5EF0D161">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:19:44 UTC</createdTime>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<importedID>3CAC3EC2-BA79-0415-BF6C-CC067CDD3615</importedID>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cantidad" id="C1D61BFD-44FF-D35A-808E-3C7A56292FBA">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:19:44 UTC</createdTime>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<importedID>D926C6B2-91B5-2E93-3FFE-86E2FE4C91A1</importedID>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Trabajador" id="E427F109-A67B-1416-6928-6D13C249CF4C">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:23:33 UTC</createdTime>
+<generatorID>586DA49E-CC86-0E72-9DE3-3360F4E009F8</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<referedAttribute>F69A5CEF-CD73-AA9F-C1EB-1D05CB8184D6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="51845EBB-DE6E-A613-767D-D3B0102FD95D" name="Insumo PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:19:44 UTC</createdTime>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<importedID>896C8A5B-BC97-CF4D-4B77-9334DCA9F206</importedID>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>747CF256-C438-93BC-E949-8CB73E5F7BAF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

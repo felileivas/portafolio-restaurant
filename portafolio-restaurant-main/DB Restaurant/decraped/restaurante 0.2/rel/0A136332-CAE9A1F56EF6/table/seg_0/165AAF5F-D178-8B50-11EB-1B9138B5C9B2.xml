@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="165AAF5F-D178-8B50-11EB-1B9138B5C9B2" name="MedioPago">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:23:39 UTC</createdTime>
+<generatorID>35EC963F-C6E9-836C-33ED-C8F6DDA0A17F</generatorID>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_MedioPago" id="F11532DA-B2DB-69B1-952C-60C7B800EBBE">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:23:39 UTC</createdTime>
+<generatorID>B626CD77-A487-E426-CF5F-027B620D92EC</generatorID>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="826C26D3-598E-1F38-A6BC-C03EB007D6B4">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:23:39 UTC</createdTime>
+<generatorID>D7AE4E96-CA8F-7E4F-62FE-17A14B151E95</generatorID>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Estado" id="60F12C36-349C-628B-314C-5C0D4D4D7BC5">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:23:39 UTC</createdTime>
+<generatorID>AAFD85C1-845F-8AE0-CC64-CCA5195BBAC0</generatorID>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4CA2DE09-CD5E-91FB-A977-8CD81B8CC5C2" name="MedioPago_PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:23:39 UTC</createdTime>
+<generatorID>BB76FC6B-A793-B7AF-C18B-E80689749490</generatorID>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F11532DA-B2DB-69B1-952C-60C7B800EBBE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

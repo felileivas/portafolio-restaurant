@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Pedido Mesero FK" directorySegmentName="seg_0" id="72F73E40-3148-AEFD-318C-C476B55242FD">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 16:28:40 UTC</createdTime>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<importedID>8D69C943-6909-9166-DA3C-45EF16E0148E</importedID>
+<engineerTo>
+<item key="C59809FE-412C-520D-3910-708F7CE7DC72" value="true"/>
+</engineerTo>
+<sourcePk>16BF6459-65A8-54BD-9E43-6C1C339A96A6</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8F3E3F72-28EB-6814-BF76-69D5BC6D5E36</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>85CDF7D5-2851-A76A-8637-E6F3B9DBB437</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

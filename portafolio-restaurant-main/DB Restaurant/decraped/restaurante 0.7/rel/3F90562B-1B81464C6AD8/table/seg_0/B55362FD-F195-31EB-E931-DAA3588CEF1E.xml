@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B55362FD-F195-31EB-E931-DAA3588CEF1E" name="TipoTrabajador">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>93E1A816-0A95-99DA-8A77-A9F0E20E0521</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TipoTrabajdor" id="4B1E5D62-1BEB-A2F5-2C88-E3B26D73C30D">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>BD822743-1914-BD44-DBAD-CA2679625E41</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NombreTipoTrabajador" id="06A75882-E5F3-5649-12A8-CA2397F47D91">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>8C53315C-9941-0F68-D2FA-A503EBCEF8FA</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="75701D7F-D5E0-9628-6469-A742D0E6B683" name="TipoTrabajador_PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>E5196779-B86F-5BEE-851B-3207293937DD</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4B1E5D62-1BEB-A2F5-2C88-E3B26D73C30D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

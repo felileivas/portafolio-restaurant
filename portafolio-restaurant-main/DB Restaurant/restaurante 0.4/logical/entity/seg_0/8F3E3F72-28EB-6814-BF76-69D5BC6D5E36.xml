@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8F3E3F72-28EB-6814-BF76-69D5BC6D5E36" name="Mesero">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 16:28:40 UTC</createdTime>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<importedID>83046CA2-0228-60C6-B7E3-DB8D92CA557F</importedID>
+<engineerTo>
+<item key="C59809FE-412C-520D-3910-708F7CE7DC72" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID Mesero" id="1676686B-45B7-1BE7-BAE2-895B6CBBE3DF">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 16:28:40 UTC</createdTime>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<importedID>CA45F703-DE3B-C4BC-455D-C587CF5F4DAF</importedID>
+<engineerTo>
+<item key="C59809FE-412C-520D-3910-708F7CE7DC72" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre" id="3182A727-29E3-A168-B4D2-DB1965EC00F4">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 16:28:40 UTC</createdTime>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<importedID>BA5782A7-FD19-B0E5-D16F-BE146A20EDAB</importedID>
+<engineerTo>
+<item key="C59809FE-412C-520D-3910-708F7CE7DC72" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Correo" id="6A9D72C3-5961-3F67-A40A-1C89E744E30E">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 16:28:40 UTC</createdTime>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<importedID>ACF0106E-EABE-214C-30E6-B10DBA8384CE</importedID>
+<engineerTo>
+<item key="C59809FE-412C-520D-3910-708F7CE7DC72" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Contrasenna" id="68810C70-0E37-438C-D585-0E3D319394A7">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 16:28:40 UTC</createdTime>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<importedID>1F58DD86-F21C-0295-ADB4-DD72CEE7DE17</importedID>
+<engineerTo>
+<item key="C59809FE-412C-520D-3910-708F7CE7DC72" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="16BF6459-65A8-54BD-9E43-6C1C339A96A6" name="Mesero PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 16:28:40 UTC</createdTime>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<importedID>0A95E0B3-8DF6-DE1D-2252-90C844C321CC</importedID>
+<engineerTo>
+<item key="C59809FE-412C-520D-3910-708F7CE7DC72" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1676686B-45B7-1BE7-BAE2-895B6CBBE3DF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

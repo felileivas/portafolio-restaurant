@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D3C86C4F-8CA7-FA95-BCCE-A7000CBC1B48" name="Usuario">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:42:01 UTC</createdTime>
+<generatorID>228283AB-6165-A2E1-B6C3-6D1F1907249B</generatorID>
+<ownerDesignName>restaurante 0.6</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Usuario" id="FA155EFC-868D-2EF0-6BF2-A351A225A1E9">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:42:01 UTC</createdTime>
+<generatorID>2D098BBD-4141-3694-3F69-279A55912967</generatorID>
+<ownerDesignName>restaurante 0.6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="715F1A20-9E46-0330-7A71-2AC30FF4CDD4">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:42:01 UTC</createdTime>
+<generatorID>D1905036-8405-415A-52DC-78738E4DEB7A</generatorID>
+<ownerDesignName>restaurante 0.6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Correo" id="E48D00FC-F8F9-858A-B968-2B4953A1F6BC">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:42:01 UTC</createdTime>
+<generatorID>9FC76F15-016E-5EED-28BD-275E4FD240B6</generatorID>
+<ownerDesignName>restaurante 0.6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Contrasenna" id="C2FC0CD0-F5C2-FFBE-BCD3-A69D3A5CA2B6">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:42:01 UTC</createdTime>
+<generatorID>159CFAC8-44C2-105E-1F23-C3781E9DF9C5</generatorID>
+<ownerDesignName>restaurante 0.6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="407C4FA8-8BF0-0722-3443-180533549ABA" name="Usuario_PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:42:01 UTC</createdTime>
+<generatorID>AC68B29A-2DD2-9E7F-04FA-390F4865D373</generatorID>
+<ownerDesignName>restaurante 0.6</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FA155EFC-868D-2EF0-6BF2-A351A225A1E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

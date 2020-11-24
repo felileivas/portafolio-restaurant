@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Boleta Pedido FK" directorySegmentName="seg_0" id="2DE6B1E6-CE56-5DAE-1BC7-DCFE903EFF71">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:19:44 UTC</createdTime>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<importedID>4C602759-9923-C9E1-882C-A923055CF32A</importedID>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<sourcePk>5EC11F74-82D9-60B6-4EBC-8D63DF5197A4</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>A2A34CAE-CEB2-2F8C-86BF-00E4050CF34A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>47A76AD7-D4C4-2BC1-7DB1-31AAC1C2ECD3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="11356BC2-6166-EFD0-6CB6-B1A46AD973EE" name="Receta">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<importedID>5B5F146C-E51B-4DB2-E524-DC5BCD7E2A65</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Receta" id="99D52426-6249-51EA-E95F-ECB06FE49759">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<importedID>CE38AC17-20D0-0184-8D67-91591234C197</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre" id="82ED8DC1-76EC-8B6B-596E-7D946756A423">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<importedID>EFCB31AD-E401-323B-78DA-9BC3FEE087C0</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Costo" id="F8844C35-1E28-9504-F342-8E1C2B72977D">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<importedID>969B2E16-2B41-A09A-3D27-43BAFCCC692F</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Estado" id="DCFADD0F-4E12-5076-1211-B7EE554576A1">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<importedID>11835714-8D1B-AD5F-BA3B-2560756CBC99</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Insumo" id="74AF7360-AF88-6638-4E3C-FA0097D8CE04">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:12:41 UTC</createdTime>
+<generatorID>EBA29521-D410-FC35-F46D-892C6F4A2A5E</generatorID>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<referedAttribute>4FAA7019-02EE-68D2-D70C-0CEA69F2FD6B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B9C88323-C1A5-396F-11F1-37515CCE997A" name="Receta PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<importedID>B50D8B8B-EDCD-4EE8-ACF8-1B5C6A5A8B88</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>99D52426-6249-51EA-E95F-ECB06FE49759</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

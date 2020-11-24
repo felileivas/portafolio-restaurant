@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Receta Insumo FK" directorySegmentName="seg_0" id="E05EB977-A1AB-4251-9F75-4847717A28A5">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:19:44 UTC</createdTime>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<importedID>95FBD842-981F-1793-5F9D-A03813308B6C</importedID>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<sourcePk>51845EBB-DE6E-A613-767D-D3B0102FD95D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>866392C6-B1BA-8A84-260A-8B015D0C7B13</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>001E11E8-249E-6EF6-6821-5DD925226A99</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

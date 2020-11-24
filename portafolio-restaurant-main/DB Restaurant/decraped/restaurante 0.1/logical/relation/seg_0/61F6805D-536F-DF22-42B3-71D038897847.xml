@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="reserva_usuario" directorySegmentName="seg_0" id="61F6805D-536F-DF22-42B3-71D038897847">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 23:06:41 UTC</createdTime>
+<ownerDesignName>restaurante 0.1</ownerDesignName>
+<importedID>584DFB13-736F-56AA-903C-F67D25C56C35</importedID>
+<engineerTo>
+<item key="71089289-01D1-C1BE-978E-97912C3A61DC" value="true"/>
+</engineerTo>
+<sourcePk>8A5921BC-900B-2A15-DD61-A53CE5F1B8CC</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8193906B-1253-DDB9-8468-9897B461449D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0569BE90-BFE8-32E6-1AAC-1428FD40C991</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

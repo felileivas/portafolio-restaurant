@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1665008D-D8D5-B885-D0F5-5D7BEB8E2C42" containerWithKeyObject="80BF8D62-FF48-FE69-1FA0-127A990AE79D" localFKIndex="579104FF-C0D2-1A5A-579E-D1918237950A" name="Pedido_Mesero_FK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:23:39 UTC</createdTime>
+<generatorID>8D69C943-6909-9166-DA3C-45EF16E0148E</generatorID>
+<ownerDesignName>restaurante 0.2</ownerDesignName>
+<referredTableLongName>Mesero</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4E50F763-3BF2-D5CA-2382-DCA4EC3E05AC</referredTableID>
+<keyObject>6ABCEA4E-1798-8146-75A9-CF37603C30C5</keyObject>
+<referredKeyID>6ABCEA4E-1798-8146-75A9-CF37603C30C5</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Mesero</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

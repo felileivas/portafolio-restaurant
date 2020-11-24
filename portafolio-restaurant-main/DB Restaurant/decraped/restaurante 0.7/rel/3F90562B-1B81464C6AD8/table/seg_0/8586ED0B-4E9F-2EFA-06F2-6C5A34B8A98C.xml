@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8586ED0B-4E9F-2EFA-06F2-6C5A34B8A98C" name="Pedido">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>A2A34CAE-CEB2-2F8C-86BF-00E4050CF34A</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Pedido" id="1389C277-B1D4-B0FF-D983-BA6CA3DE2BF1">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>08C3BEF4-0152-9BA5-BFBE-E3259A0EE599</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha" id="6DD07E27-7E04-4F8E-6DFF-1DF56B38CD08">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>A112A3FE-BE5E-51B1-7278-EE7B6D396C64</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Comentario" id="14712E45-FF23-A04E-C9B7-52EBB919C880">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>D73F8E36-4979-8460-CD24-DCF52C59FD5E</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Reserva_ID_Reserva" id="4E20941A-3BFB-5DEA-32BC-3E16F6F68E83">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>288E1046-F2C9-4C3C-E9AA-D8703C8DF377</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A77B621C-6DDA-5860-9BC3-D9C6A3052D90" referredColumn="0E2925CA-0E7F-026B-6E2D-5F139BF1D067"/>
+</associations>
+</Column>
+<Column name="Preparacion_ID_Preparacion" id="AB045B87-6159-B136-DEB2-B4CAF3A94A30">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>0AC7B6BD-CD6C-D61B-E750-6E8FEB68FEC1</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="311D4739-37D4-EF78-560E-061721485BCB" referredColumn="2C66AF7B-623E-6BCB-8CE8-7FE06BF35C5A"/>
+</associations>
+</Column>
+<Column name="Trabajador_ID_Trabajador" id="2DF33709-87D0-D25A-E0D0-EDAA01140E67">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>3E7942E8-F1FA-C3D5-9951-A425225F254D</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="19DC4628-7C84-D0B5-632C-F6D43F46C647" referredColumn="A72C7704-9D9A-0B87-231D-7C700E1E9091"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="72075D0B-0A0C-3736-2424-7B615A08EBA5" name="Pedido_PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>5EC11F74-82D9-60B6-4EBC-8D63DF5197A4</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1389C277-B1D4-B0FF-D983-BA6CA3DE2BF1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="181951A5-9585-B154-23B5-1B90B1E550D5" name="Pedido_Preparacion_FK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>77B4807F-8357-A40C-02A7-583FECC484AA</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB045B87-6159-B136-DEB2-B4CAF3A94A30"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="127523F9-5BF6-E70B-ABF1-0C990A0C0841" name="Pedido_Reserva_FK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>ADB871C6-483B-ACCD-C688-9EEEBD031715</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E20941A-3BFB-5DEA-32BC-3E16F6F68E83"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="39380C30-15D1-4070-C31F-48D9D1B7BED8" name="Pedido_Trabajador_FK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:30:01 UTC</createdTime>
+<generatorID>C83C8BE2-5A29-95B3-32D9-E94423BB736A</generatorID>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DF33709-87D0-D25A-E0D0-EDAA01140E67"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

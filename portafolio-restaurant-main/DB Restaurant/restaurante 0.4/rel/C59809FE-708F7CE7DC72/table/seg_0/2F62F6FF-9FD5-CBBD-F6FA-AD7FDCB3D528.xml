@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2F62F6FF-9FD5-CBBD-F6FA-AD7FDCB3D528" name="Reserva">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:31:09 UTC</createdTime>
+<generatorID>C1CFD876-3F60-F985-A9C8-1052F1FB6C77</generatorID>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Reserva" id="5EBFA800-EE95-CFF2-2D05-A7C1B12A6AA4">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:31:09 UTC</createdTime>
+<generatorID>B08106BD-6D50-504D-5084-CD24D8C55904</generatorID>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Fecha" id="E702AEA4-90AC-0801-3856-CDD0B09C4CCD">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:31:09 UTC</createdTime>
+<generatorID>15D43763-4AC0-6DA1-CEAB-A2EB292C6888</generatorID>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Mesa_ID_Mesa" id="A6458156-3DC3-23DD-DEAC-2000C20B0768">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:31:09 UTC</createdTime>
+<generatorID>F7A12280-DDFC-1D9B-D4E7-E99C53E984C6</generatorID>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="740E680D-2D60-1827-6DE5-99E2BA5B7ED9" referredColumn="FA034D0F-8FBC-30C4-6697-878B5FD6EE96"/>
+</associations>
+</Column>
+<Column name="Usuario_ID_Usuario" id="697E3771-6400-0E49-1600-09B01B43EEC3">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:31:09 UTC</createdTime>
+<generatorID>3C39B2CA-64A3-C459-BC21-1BA6807A666F</generatorID>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="968F6B2A-6CDC-C182-6CA0-8D4D3B560EAB" referredColumn="A33ADE4E-F01A-0D08-EB0A-999D3C533C19"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4A68A37A-978C-CE4A-2524-024F3C24DB06" name="Reserva_PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:31:09 UTC</createdTime>
+<generatorID>A310A2C7-59FF-48E5-BF97-A42473717554</generatorID>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5EBFA800-EE95-CFF2-2D05-A7C1B12A6AA4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D08CD515-3F93-B4DC-C035-C2BB0333A13F" name="Reserva_Mesa_FK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:31:09 UTC</createdTime>
+<generatorID>D609619E-D799-183C-952B-0A54B1051921</generatorID>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6458156-3DC3-23DD-DEAC-2000C20B0768"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B7F1BD41-E029-265E-8FAA-FBEA6431A703" name="Reserva_Usuario_FK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:31:09 UTC</createdTime>
+<generatorID>EE9A32C0-DB3D-52C1-4703-739F5B01D09C</generatorID>
+<ownerDesignName>restaurante 0.4</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="697E3771-6400-0E49-1600-09B01B43EEC3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

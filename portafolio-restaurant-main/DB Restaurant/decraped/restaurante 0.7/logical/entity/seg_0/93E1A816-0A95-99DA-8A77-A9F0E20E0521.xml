@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="93E1A816-0A95-99DA-8A77-A9F0E20E0521" name="TipoTrabajador">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:21:12 UTC</createdTime>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_TipoTrabajdor" id="BD822743-1914-BD44-DBAD-CA2679625E41">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:21:21 UTC</createdTime>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NombreTipoTrabajador" id="8C53315C-9941-0F68-D2FA-A503EBCEF8FA">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:21:41 UTC</createdTime>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E5196779-B86F-5BEE-851B-3207293937DD" name="TipoTrabajador PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-11 19:21:37 UTC</createdTime>
+<ownerDesignName>restaurante 0.7</ownerDesignName>
+<engineerTo>
+<item key="3F90562B-05A9-6E9F-0CE3-1B81464C6AD8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BD822743-1914-BD44-DBAD-CA2679625E41</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

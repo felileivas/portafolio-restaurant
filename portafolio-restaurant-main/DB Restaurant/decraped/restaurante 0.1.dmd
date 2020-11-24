@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="restaurante 0.1" id="73814288-A424-479E-E7C7-9120B9E2B211" version="3.5">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 23:06:05 UTC</createdTime>
+<ownerDesignName>restaurante 0.1</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>73814288-A424-479E-E7C7-9120B9E2B211</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="ACB8394C-9263-D565-5A1B-E52F5A00ACE2">
+<designStoragePath>C:\Users\f4lei\Documents\DB Restaurant\restaurante</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

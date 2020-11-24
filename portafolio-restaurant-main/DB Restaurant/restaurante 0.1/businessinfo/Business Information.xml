@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="39E4A73E-A09E-4A51-762E-C050039851CC">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 23:06:05 UTC</createdTime>
+<ownerDesignName>restaurante 0.1</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

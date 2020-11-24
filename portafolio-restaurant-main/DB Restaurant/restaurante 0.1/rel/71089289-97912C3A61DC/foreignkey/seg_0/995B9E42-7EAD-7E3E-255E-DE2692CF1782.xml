@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="995B9E42-7EAD-7E3E-255E-DE2692CF1782" containerWithKeyObject="B1E4A363-CD8A-2B48-5D9D-BB127DC86F65" localFKIndex="6932EC3C-D3FF-2821-6903-BBA1DBFB8D56" name="Insumo_Receta_FK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 23:07:15 UTC</createdTime>
+<generatorID>E35639C2-F61C-7551-C8C5-903EE4A08238</generatorID>
+<ownerDesignName>restaurante 0.1</ownerDesignName>
+<referredTableLongName>Receta</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D3DBDF7E-9FAD-03CE-6689-2F30C14FE819</referredTableID>
+<keyObject>402FB375-7EA4-1869-E770-F17CEFCB180C</keyObject>
+<referredKeyID>402FB375-7EA4-1869-E770-F17CEFCB180C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_Receta</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

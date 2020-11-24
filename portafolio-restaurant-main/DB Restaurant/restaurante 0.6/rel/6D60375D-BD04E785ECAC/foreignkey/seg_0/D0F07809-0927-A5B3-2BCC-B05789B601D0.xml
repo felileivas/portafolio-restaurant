@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D0F07809-0927-A5B3-2BCC-B05789B601D0" containerWithKeyObject="DAB6A78A-C4E3-7FC4-EDB1-3D44FA0AAA0F" localFKIndex="4D16B859-40C4-97FF-A7B1-93F3A05E5202" name="Boleta_MedioPago_FK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:42:01 UTC</createdTime>
+<generatorID>A42F3D62-92C0-D254-B529-6B2A983319A2</generatorID>
+<ownerDesignName>restaurante 0.6</ownerDesignName>
+<referredTableLongName>MedioPago</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4F05A284-4675-5BFA-F785-6D106B8A6A5F</referredTableID>
+<keyObject>3BCA6E81-1780-1871-EC44-347C09E1FF34</keyObject>
+<referredKeyID>3BCA6E81-1780-1871-EC44-347C09E1FF34</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_MedioPago</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

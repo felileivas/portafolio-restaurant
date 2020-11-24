@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0A7456CA-261F-34F4-7417-207F440CD10C" name="Mesa">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:42:01 UTC</createdTime>
+<generatorID>90F854DA-04F7-1F9F-5932-F5247DD7C676</generatorID>
+<ownerDesignName>restaurante 0.6</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Mesa" id="B52E0834-3CAF-BCFB-60FC-BBE939CADBD6">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:42:01 UTC</createdTime>
+<generatorID>60695273-6104-5114-7B50-D332F1285A17</generatorID>
+<ownerDesignName>restaurante 0.6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Capacidad" id="061BE60F-FD5E-8CD7-F1E6-144C5F1F98DF">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:42:01 UTC</createdTime>
+<generatorID>3A319E4E-A860-D694-86AE-1971FD60F1C7</generatorID>
+<ownerDesignName>restaurante 0.6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Sector" id="E989635A-D3BA-7107-9830-746C1A6804E8">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:42:01 UTC</createdTime>
+<generatorID>2B6EB665-C3B6-4BFB-CD78-8E9D65FF49E1</generatorID>
+<ownerDesignName>restaurante 0.6</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Estado" id="9279FBC5-37C8-0FCB-5DC0-B14A3EF340DD">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:42:01 UTC</createdTime>
+<generatorID>27C5AEDD-A5D5-34C0-F2A3-48C3AE20CCA1</generatorID>
+<ownerDesignName>restaurante 0.6</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7BC0C73B-E42F-5710-EBBA-7529F73AD6BB" name="Mesa_PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-06 01:42:01 UTC</createdTime>
+<generatorID>0B4D6652-5834-A0FE-56F0-4C7C2B35C603</generatorID>
+<ownerDesignName>restaurante 0.6</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B52E0834-3CAF-BCFB-60FC-BBE939CADBD6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

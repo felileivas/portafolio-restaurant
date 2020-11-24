@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="receta_pedido" directorySegmentName="seg_0" id="FA314B51-FA1D-7976-DE1A-997E8803D0BA">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-03 23:06:41 UTC</createdTime>
+<ownerDesignName>restaurante 0.1</ownerDesignName>
+<importedID>186FDE09-F8E6-042A-AD96-73D874794A2E</importedID>
+<engineerTo>
+<item key="71089289-01D1-C1BE-978E-97912C3A61DC" value="true"/>
+</engineerTo>
+<sourcePk>B50D8B8B-EDCD-4EE8-ACF8-1B5C6A5A8B88</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5B5F146C-E51B-4DB2-E524-DC5BCD7E2A65</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6AF2D919-E8DB-C621-4BF3-C7E2D37A9B3A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="446A30CD-8248-918D-AD1C-722A7E4E0D21" name="Reserva">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.3</ownerDesignName>
+<importedID>8193906B-1253-DDB9-8468-9897B461449D</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_Reserva" id="96382A43-0520-804F-C3C3-CD051478F007">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.3</ownerDesignName>
+<importedID>5FE092D5-C773-B1B0-2E14-5E8746754DCD</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fecha" id="64BDE9CE-0A3B-15B6-A424-0BC656247FA3">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.3</ownerDesignName>
+<importedID>86D325E7-934B-761C-67ED-40C2C27CFB64</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Mesa" id="3FF09B1E-3C78-C9C8-8DAA-77B39715A723">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:15:13 UTC</createdTime>
+<generatorID>2B74538F-B6CB-BA75-A73F-AF176E8EC309</generatorID>
+<ownerDesignName>restaurante 0.3</ownerDesignName>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<referedAttribute>0AE2EFE7-4CAF-B96E-900A-2B59BFB11B8E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_Usuario" id="2FEDB6D5-DB6A-B1D0-C796-D784D0FEAA77">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:23:10 UTC</createdTime>
+<generatorID>4650D83B-5D8A-30D9-6097-A0357B1D6120</generatorID>
+<ownerDesignName>restaurante 0.3</ownerDesignName>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="true"/>
+</engineerTo>
+<referedAttribute>5D1B4161-A031-BFA7-5AEF-8174BDB2FD16</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9A48116B-4479-8BE3-8BA9-6FC6FFE515D5" name="Reserva PK">
+<createdBy>f4lei</createdBy>
+<createdTime>2020-10-05 15:09:56 UTC</createdTime>
+<ownerDesignName>restaurante 0.3</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<importedID>8A5921BC-900B-2A15-DD61-A53CE5F1B8CC</importedID>
+<engineerTo>
+<item key="0A136332-F122-9A39-662A-CAE9A1F56EF6" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>96382A43-0520-804F-C3C3-CD051478F007</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
