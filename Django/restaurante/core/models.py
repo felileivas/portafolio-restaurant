@@ -10,160 +10,185 @@ from django.db import models
 
 class Boleta(models.Model):
     id_boleta = models.AutoField(primary_key=True)
-    fecha = models.DateField()
-    montototal = models.FloatField(verbose_name='Monto Total')
-    mediopago_id_mediopago = models.ForeignKey('Mediopago', models.DO_NOTHING, db_column='mediopago_id_mediopago', verbose_name='Medio de pago')
-    pedido_id_pedido = models.ForeignKey('Pedido', models.DO_NOTHING, db_column='pedido_id_pedido', verbose_name='Pedido')
+    montototal = models.FloatField()
+    id_mediopago = models.ForeignKey(
+        'Mediopago', models.DO_NOTHING, db_column='id_mediopago')
+    id_pedido = models.ForeignKey(
+        'Pedido', models.DO_NOTHING, db_column='id_pedido')
 
     class Meta:
         managed = False
         db_table = 'boleta'
-        verbose_name = 'Boleta'
-        verbose_name_plural = 'Boletas'
-        ordering = ['-fecha']
-    def __str__(self):
-        return 'ID: {} - Fecha Emision: {}'.format(self.id_boleta, self.fecha)
 
+
+class Cliente(models.Model):
+    id_cliente = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=50)
+    apellido = models.CharField(max_length=50)
+    correo = models.CharField(max_length=50)
+    contrasenna = models.CharField(max_length=256)
+
+    class Meta:
+        managed = False
+        db_table = 'cliente'
 
 
 class Insumo(models.Model):
     id_insumo = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=50)
     tipo = models.CharField(max_length=50)
-    cantidad = models.FloatField()
+    stock = models.FloatField()
 
     class Meta:
         managed = False
         db_table = 'insumo'
-        verbose_name = 'Insumo'
-        verbose_name_plural = 'Insumos'
-    def __str__(self):
-        return '{}'.format(self.nombre)
+
+
+class InsumoSolicitud(models.Model):
+    id_solicitud = models.OneToOneField(
+        'Solicitudinsumo', models.DO_NOTHING, db_column='id_solicitud', primary_key=True)
+    id_insumo = models.ForeignKey(
+        Insumo, models.DO_NOTHING, db_column='id_insumo')
+    cantidadsolicitada = models.FloatField()
+
+    class Meta:
+        managed = False
+        db_table = 'insumo_solicitud'
+        unique_together = (('id_solicitud', 'id_insumo'),)
 
 
 class Mediopago(models.Model):
     id_mediopago = models.AutoField(primary_key=True)
-    nombre = models.CharField(max_length=50)
+    nombre = models.CharField(max_length=25)
     estado = models.FloatField()
 
     class Meta:
         managed = False
         db_table = 'mediopago'
-        verbose_name = 'Medio de pago'
-        verbose_name_plural = 'Medios de pagos'
-    def __str__(self):
-        return '{}'.format(self.nombre)
+
+
+class Menucategoria(models.Model):
+    id_menucategoria = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=25)
+
+    class Meta:
+        managed = False
+        db_table = 'menucategoria'
+
+
+class Menuitem(models.Model):
+    id_menuitem = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=50)
+    precio = models.FloatField()
+    estado = models.FloatField()
+    id_menucategoria = models.ForeignKey(
+        Menucategoria, models.DO_NOTHING, db_column='id_menucategoria')
+
+    class Meta:
+        managed = False
+        db_table = 'menuitem'
+
+
+class Menuiteminsumo(models.Model):
+    id_menuitem = models.OneToOneField(
+        Menuitem, models.DO_NOTHING, db_column='id_menuitem', primary_key=True)
+    id_insumo = models.ForeignKey(
+        Insumo, models.DO_NOTHING, db_column='id_insumo')
+    cantidad = models.FloatField()
+    comentario = models.CharField(max_length=50, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'menuiteminsumo'
+        unique_together = (('id_menuitem', 'id_insumo'),)
 
 
 class Mesa(models.Model):
-    id_mesa = models.AutoField(primary_key=True)
+    numeromesa = models.AutoField(primary_key=True)
     capacidad = models.FloatField()
-    sector = models.CharField(max_length=50, blank=True, null=True)
+    sector = models.CharField(max_length=25, blank=True, null=True)
     estado = models.FloatField()
 
     class Meta:
         managed = False
         db_table = 'mesa'
-        verbose_name = 'Mesa'
-        verbose_name_plural = 'Mesas'
-
-    def __str__(self):
-        return '{}'.format(self.sector)
-
-
-
-class Mesero(models.Model):
-    id_mesero = models.AutoField(primary_key=True)
-    nombre = models.CharField(max_length=50)
-    correo = models.CharField(max_length=100)
-    contrasenna = models.CharField(max_length=50)
-
-    class Meta:
-        managed = False
-        db_table = 'mesero'
-        verbose_name = 'Mesero'
-        verbose_name_plural = 'Meseros'
-    def __str__(self):
-        return '{}'.format(self.nombre)
 
 
 class Pedido(models.Model):
     id_pedido = models.AutoField(primary_key=True)
-    fecha = models.DateField()
-    comentario = models.CharField(max_length=50, blank=True, null=True)
-    mesero_id_mesero = models.ForeignKey(Mesero, models.DO_NOTHING, db_column='mesero_id_mesero', verbose_name='Mesero')
-    reserva_id_reserva = models.ForeignKey('Reserva', models.DO_NOTHING, db_column='reserva_id_reserva', verbose_name='Reserva')
-    preparacion_id_preparacion = models.ForeignKey('Preparacion', models.DO_NOTHING, db_column='preparacion_id_preparacion', verbose_name='Preparacion')
+    fechapedido = models.DateField()
+    numeromesa = models.ForeignKey(
+        Mesa, models.DO_NOTHING, db_column='numeromesa')
+    id_trabajador = models.ForeignKey(
+        'Trabajador', models.DO_NOTHING, db_column='id_trabajador')
+    id_cliente = models.ForeignKey(
+        Cliente, models.DO_NOTHING, db_column='id_cliente', blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'pedido'
-        verbose_name = 'Pedido'
-        verbose_name_plural = 'Pedidos'
-        ordering = ['-fecha']
-    def __str__(self):
-        return '{}'.format(self.reserva_id_reserva)
 
 
-class Preparacion(models.Model):
-    id_preparacion = models.AutoField(primary_key=True)
-    nombre = models.CharField(max_length=50)
-    precio = models.FloatField()
-    estado = models.FloatField()
+class Pedidomenuitem(models.Model):
+    id_pedido = models.OneToOneField(
+        Pedido, models.DO_NOTHING, db_column='id_pedido', primary_key=True)
+    id_menuitem = models.ForeignKey(
+        Menuitem, models.DO_NOTHING, db_column='id_menuitem')
+    cantidad = models.FloatField()
+    comentario = models.CharField(max_length=50, blank=True, null=True)
 
     class Meta:
         managed = False
-        db_table = 'preparacion'
-        verbose_name = 'Preparacion'
-        verbose_name_plural = 'Preparaciones'
-        ordering = ['id_preparacion']
-    def __str__(self):
-        return '{}'.format(self.nombre)
-
-
-
-class Receta(models.Model):
-    id_receta = models.AutoField(primary_key=True)
-    insumo_id_insumo = models.ForeignKey(Insumo, models.DO_NOTHING, db_column='insumo_id_insumo', verbose_name='Ingrediente')
-    preparacion_id_preparacion = models.ForeignKey(Preparacion, models.DO_NOTHING, db_column='preparacion_id_preparacion', verbose_name='Receta')
-
-    class Meta:
-        managed = False
-        db_table = 'receta'
-        verbose_name = 'Receta'
-        verbose_name_plural = 'Recetas'
-    #def __str__(self):
-    #    return '{}'.format( self.preparacion_id_preparacion)
+        db_table = 'pedidomenuitem'
+        unique_together = (('id_pedido', 'id_menuitem'),)
 
 
 class Reserva(models.Model):
     id_reserva = models.AutoField(primary_key=True)
-    fecha = models.DateField()
-    mesa_id_mesa = models.ForeignKey(Mesa, models.DO_NOTHING, db_column='mesa_id_mesa', verbose_name='Mesa')
-    usuario_id_usuario = models.ForeignKey('Usuario', models.DO_NOTHING, db_column='usuario_id_usuario', verbose_name='Cliente')
+    fechareserva = models.DateField()
+    horareserva = models.CharField(max_length=25)
+    numeromesa = models.FloatField()
+    estadoreserva = models.FloatField()
+    id_cliente = models.ForeignKey(
+        Cliente, models.DO_NOTHING, db_column='id_cliente')
 
     class Meta:
         managed = False
         db_table = 'reserva'
-        verbose_name = 'Reserva'
-        verbose_name_plural = 'Reservas'
-    def __str__(self):
-        return '{} {} - {}'.format(self.fecha, self.mesa_id_mesa, self.usuario_id_usuario)
+        unique_together = (('id_reserva', 'id_cliente'),)
 
 
-
-class Usuario(models.Model):
-    id_usuario = models.AutoField(primary_key=True)
-    nombre = models.CharField(max_length=50)
-    correo = models.CharField(max_length=50)
-    contrasenna = models.CharField(max_length=50)
+class Roltrabajador(models.Model):
+    id_rol = models.AutoField(primary_key=True)
+    descripcionrol = models.CharField(max_length=50)
 
     class Meta:
         managed = False
-        db_table = 'usuario'
-        verbose_name = 'Usuario'
-        verbose_name_plural = 'Usuarios'
-    def __str__(self):
-        return 'ID: {} - Cliente: {}'.format(self.id_usuario, self.nombre)
+        db_table = 'roltrabajador'
 
 
+class Solicitudinsumo(models.Model):
+    id_solicitud = models.AutoField(primary_key=True)
+    fechasolicitud = models.DateField()
+    estado = models.FloatField()
+    comentario = models.CharField(max_length=150, blank=True, null=True)
+    id_trabajador = models.ForeignKey(
+        'Trabajador', models.DO_NOTHING, db_column='id_trabajador')
+
+    class Meta:
+        managed = False
+        db_table = 'solicitudinsumo'
+
+
+class Trabajador(models.Model):
+    id_trabajador = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=50)
+    apellido = models.CharField(max_length=50)
+    correo = models.CharField(max_length=50)
+    contrasenna = models.CharField(max_length=256)
+    id_rol = models.ForeignKey(
+        Roltrabajador, models.DO_NOTHING, db_column='id_rol')
+
+    class Meta:
+        managed = False
+        db_table = 'trabajador'

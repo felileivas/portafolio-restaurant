@@ -1,8 +1,97 @@
 {% extends 'core/base.html' %}
 {% load static %}
-
+{% block styles %}
+<style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+{%endblock%}
 {% block content %}
+<h1 class="text-center">Bienvenido</h1>
+<h2 class="text-center">Restaurant Siglo XXI</h2>
+<br>
 
-<h2> Prueba de contenido </h2>
+<div id="demo" class="carousel slide offset-md-4 col-md-4 offset-md-4" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'core/files/img1.jpg' %}" alt="Los Angeles" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'core/files/img2.jpg' %}" alt="Chicago" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'core/files/img3.jpg' %}" alt="New York" width="1100" height="500">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180"
+          style="height: 180px; width: 100%; display: block;" src="{% static 'core/files/img4.jpg'%}"
+          data-holder-rendered="true">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180"
+          style="height: 180px; width: 100%; display: block;" src="{% static 'core/files/img4.jpg'%}"
+          data-holder-rendered="true">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180"
+          style="height: 180px; width: 100%; display: block;" src="{% static 'core/files/img4.jpg'%}"
+          data-holder-rendered="true">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 {% endblock %}

@@ -1,187 +1,180 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
+  {% load static %}
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/> -->
+  <link rel="stylesheet" href="{% static 'core/css/menu.css' %}" />
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/> -->
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    {% load static %}
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" />
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        
-    <link rel="stylesheet" href="{% static 'core/css/navbar-fixed-left.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/navbar-fixed-left.css' %}" />
 
-    <title>Home</title>
+  <title>Home</title>
 
+
+  {% block styles %} {% endblock %}
 </head>
 
-<nav class="navbar navbar-expand-md navbar-light bg-primary fixed-left" style="background-color: #fff!important;">
-
-    <a class="navbar-brand" href="/mainAdmin/home" style="font-size:14px;">
-        <img src="https://img.icons8.com/plasticine/100/000000/pay-date.png" width="20" height="20"
-             class="d-inline-block align-cennter" alt="" />
-        Restaurant Siglo XXI
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-primary fixed-left" style="background-color: #fff !important">
+    <a class="navbar-brand" href="/mainAdmin/home" style="font-size: 14px">
+      <img src="https://img.icons8.com/plasticine/100/000000/pay-date.png" width="20" height="20"
+        class="d-inline-block align-cennter" alt="" />
+      Restaurant Siglo XXI
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <div class="card">
+          <li class="nav-item {% if request.path == '/' %}active font-weight-bold{% endif %}">
+            <a class="nav-link" href="{% url 'home' %}"><img src="{% static 'core/files/internet.png' %}" height="15px"
+                class="pr-2" alt="" />Pagina Principal</a>
+          </li>
+        </div>
 
-        <ul class="navbar-nav mr-auto">
-
-            <div class="card">
-
-                
-
-                
-            <li class="nav-item {% if request.path == '/' %}active font-weight-bold{% endif %}">
-                <a class="nav-link " href="{% url 'home' %}"><img src="{% static 'core/files/internet.png' %}" height="15px" class="pr-2 " alt="">Pagina Principal</a>
-            </li>
+        <div id="accordion">
+          <div class="card">
+            <a class="nav-link dropdown-toggle {% if request.path == '/reserva/' %}active font-weight-bold{% endif %}{% if request.path == '/pagar/' %}active font-weight-bold{% endif %}{% if request.path == '/pedirorden/' %}active font-weight-bold{% endif %}"
+              data-toggle="collapse" data-target="#collapse1"><img src="{% static 'core/files/documento.png' %}"
+                height="15px" class="pr-2" alt="" />Cliente</a>
+            <div id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'reserva' %}">Reserva</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'pagar' %}">Pagar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'pedirorden' %}">Pedir Orden</a>
+                </li>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <div id="accordion">
-                <div class="card">
-                        <a class="nav-link dropdown-toggle {% if request.path == '/reserva/' %}active font-weight-bold{% endif %}{% if request.path == '/pagar/' %}active font-weight-bold{% endif %}{% if request.path == '/pedirorden/' %}active font-weight-bold{% endif %}" data-toggle="collapse" data-target="#collapse1"><img src="{% static 'core/files/documento.png' %}" height="15px" class="pr-2 " alt="">Cliente</a> 
-                  <div id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-                        
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'reserva' %}">Reserva</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'pagar' %}">Pagar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'pedirorden' %}">Pedir Orden</a>
-                        </li>
-                    </div>
-                  </div>
-                </div>
+        <div id="accordion">
+          <div class="card">
+            <a class="nav-link dropdown-toggle {% if request.path == '/asignarmesa/' %}active font-weight-bold{% endif %}"
+              data-toggle="collapse" data-target="#collapse2"><img src="{% static 'core/files/documento.png' %}"
+                height="15px" class="pr-2" alt="" />Recepcion</a>
+            <div id="collapse2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'asignarmesa' %}">Asignar Mesa</a>
+                </li>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <div id="accordion">
-                <div class="card">
-                        <a class="nav-link dropdown-toggle {% if request.path == '/asignarmesa/' %}active font-weight-bold{% endif %}" data-toggle="collapse" data-target="#collapse2"><img src="{% static 'core/files/documento.png' %}" height="15px" class="pr-2 " alt="">Recepcion</a> 
-                  <div id="collapse2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-            
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'asignarmesa' %}">Asignar Mesa</a>
-                        </li>
+        <div id="accordion">
+          <div class="card">
+            <a class="nav-link dropdown-toggle {% if request.path == '/pedidos/' %}active font-weight-bold{% endif %}{% if request.path == '/recetas/' %}active font-weight-bold{% endif %}"
+              data-toggle="collapse" data-target="#collapse3"><img src="{% static 'core/files/documento.png' %}"
+                height="15px" class="pr-2" alt="" />Cocina</a>
+            <div id="collapse3" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'pedidos' %}">Lista de pedidos</a>
+                </li>
 
-                    </div>
-                  </div>
-                </div>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'recetas' %}">Ingresar Recetas</a>
+                </li>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <div id="accordion">
-                <div class="card">
-                        <a class="nav-link dropdown-toggle {% if request.path == '/pedidos/' %}active font-weight-bold{% endif %}{% if request.path == '/recetas/' %}active font-weight-bold{% endif %}" data-toggle="collapse" data-target="#collapse3"><img src="{% static 'core/files/documento.png' %}" height="15px" class="pr-2 " alt="">Cocina</a> 
-                  <div id="collapse3" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-            
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'pedidos' %}">Lista de pedidos</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'recetas' %}">Ingresar Recetas</a>
-                        </li>
-                        
-                    </div>
-                  </div>
-                </div>
+        <div id="accordion">
+          <div class="card">
+            <a class="nav-link dropdown-toggle {% if request.path == '/insumos/' %}active font-weight-bold{% endif %}"
+              data-toggle="collapse" data-target="#collapse4"><img src="{% static 'core/files/documento.png' %}"
+                height="15px" class="pr-2" alt="" />Bodega</a>
+            <div id="collapse4" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'insumos' %}">Insumos</a>
+                </li>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <div id="accordion">
-                <div class="card">
-                        <a class="nav-link dropdown-toggle {% if request.path == '/insumos/' %}active font-weight-bold{% endif %}" data-toggle="collapse" data-target="#collapse4"><img src="{% static 'core/files/documento.png' %}" height="15px" class="pr-2 " alt="">Bodega</a> 
-                  <div id="collapse4" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-            
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'insumos' %}">Insumos</a>
-                        </li>
+        <div id="accordion">
+          <div class="card">
+            <a class="nav-link dropdown-toggle {% if request.path == '/ganancias/' %}active font-weight-bold{% endif %}{% if request.path == '/boleta/' %}active font-weight-bold{% endif %}"
+              data-toggle="collapse" data-target="#collapse5">
+              <img src="{% static 'core/files/documento.png' %}" height="15px" class="pr-2" alt="" />Finanzas
+            </a>
+            <div id="collapse5" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'ganancias' %}">Calcular Ganancias</a>
+                </li>
 
-                    </div>
-                  </div>
-                </div>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'boleta' %}">Emitir Boleta</a>
+                </li>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <div id="accordion">
-                <div class="card">
-                        <a class="nav-link dropdown-toggle {% if request.path == '/ganancias/' %}active font-weight-bold{% endif %}{% if request.path == '/boleta/' %}active font-weight-bold{% endif %}" data-toggle="collapse" data-target="#collapse5"><img src="{% static 'core/files/documento.png' %}" height="15px" class="pr-2 " alt="">Finanzas</a> 
-                  <div id="collapse5" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
-            
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'ganancias' %}">Calcular Ganancias</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'boleta' %}">Emitir Boleta</a>
-                        </li>
-
-                    </div>
-                  </div>
-                </div>
-            </div>
-
-            <li class="divider"></li>
-
-        </ul>
-        <span class="navbar-text">
-            Bienvenido @Usuario
-            <hr>
-            <a href="{% url 'login' %}">Cerrar Sesión</a>
-        </span>
+        <li class="divider"></li>
+      </ul>
+      <span class="navbar-text">
+        Bienvenido @Usuario
+        <hr />
+        <a href="{% url 'login' %}">Cerrar Sesión</a>
+      </span>
     </div>
-</nav>
+  </nav>
 
-<body>
-    <hr>
-    <div class="container-fluid">
-    <div class="d-sm-flex justify-content-between align-items-center mb-4">
-        <!--
-        <h3 class="text-dark mb-0">Menú Principal</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Generar Reporte</a></div>
-        -->
-    <div class="row">
+  <hr />
 
-        <!-- Contenido -->
-        {% block content %}{% endblock %}
+  {% block content %}{% endblock %}
 
 
-    </div>
-</div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
 
 
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
 </body>
 
 </html>
