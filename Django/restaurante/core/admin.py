@@ -1,5 +1,25 @@
 from django.contrib import admin
 
+from .models import Boleta, Cliente, Insumo, InsumoSolicitud, Mediopago, Menucategoria, Menuitem, Menuiteminsumo, Mesa, Pedido, Pedidomenuitem, Reserva, Roltrabajador, Solicitudinsumo, Trabajador
+
+admin.site.register(Boleta)
+admin.site.register(Cliente)
+admin.site.register(Insumo)
+admin.site.register(InsumoSolicitud)
+admin.site.register(Mediopago)
+admin.site.register(Menucategoria)
+admin.site.register(Menuitem)
+admin.site.register(Menuiteminsumo)
+admin.site.register(Mesa)
+admin.site.register(Pedido)
+admin.site.register(Pedidomenuitem)
+admin.site.register(Reserva)
+admin.site.register(Roltrabajador)
+admin.site.register(Solicitudinsumo)
+admin.site.register(Trabajador)
+
+
+
 # from .models import Usuario, Reserva, Receta, Preparacion, Pedido, Mesero, Mesa, Mediopago, Insumo, Boleta
 
 # # Register your models here.
