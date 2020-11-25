@@ -32,7 +32,7 @@
   {% block styles %} {% endblock %}
 </head>
 
-<body>
+<body style="background-color: #94CAF7;">
   <nav class="navbar navbar-expand-md navbar-light bg-primary fixed-left" style="background-color: #fff !important">
     <a class="navbar-brand" href="/mainAdmin/home" style="font-size: 14px">
       <img src="https://img.icons8.com/plasticine/100/000000/pay-date.png" width="20" height="20"
@@ -54,9 +54,10 @@
           </li>
         </div>
 
+        {% if variable_usuario == 'Cliente' %}
         <div id="accordion">
           <div class="card">
-            <a class="nav-link dropdown-toggle {% if request.path == '/reserva/' %}active font-weight-bold{% endif %}{% if request.path == '/pagar/' %}active font-weight-bold{% endif %}{% if request.path == '/pedirorden/' %}active font-weight-bold{% endif %}"
+            <a class="nav-link dropdown-toggle {% if request.path == '/cliente/' %}active font-weight-bold{% endif %}{% if request.path == '/reserva/' %}active font-weight-bold{% endif %}{% if request.path == '/pagar/' %}active font-weight-bold{% endif %}{% if request.path == '/pedirorden/' %}active font-weight-bold{% endif %}"
               data-toggle="collapse" data-target="#collapse1"><img src="{% static 'core/files/documento.png' %}"
                 height="15px" class="pr-2" alt="" />Cliente</a>
             <div id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
@@ -70,10 +71,16 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'pedirorden' %}">Pedir Orden</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'formcliente' %}">Registro</a>
+                </li>
               </div>
             </div>
           </div>
         </div>
+        {% endif %}
+
+        {% if variable_usuario == 'Trabajador' %}
 
         <div id="accordion">
           <div class="card">
@@ -89,6 +96,10 @@
             </div>
           </div>
         </div>
+
+        {% endif %}
+
+        {% if variable_usuario == 'Administrador' %}
 
         <div id="accordion">
           <div class="card">
@@ -143,6 +154,7 @@
             </div>
           </div>
         </div>
+        {% endif %}
 
         <li class="divider"></li>
       </ul>

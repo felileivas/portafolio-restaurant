@@ -26,40 +26,76 @@ CalcularGanancias ganancias/
 EmitirBoleta boleta/
 """
 
+
 def home(request):
-    return render(request, "core/home.html")
+    data = {
+        'variable_usuario': 'Cliente'}
+    return render(request, "core/home.html", data)
 
 def login(request):
     return render(request, "core/login.html")
 
 #Cliente
 def reserva(request):
-    return render(request, "core/reserva.html")
+    data = {
+        'variable_usuario': 'Cliente'}
+    return render(request, "core/reserva.html", data)
 
 def pagar(request):
-    return render(request, "core/pagar.html")
+    data = {
+        'variable_usuario': 'Cliente'}
+    return render(request, "core/pagar.html", data)
 
 def pedirorden(request):
-    return render(request, "core/pedirorden.html")
+    data = {
+        'variable_usuario': 'Cliente'}
+    return render(request, "core/pedirorden.html", data)
 
 #Recepcion
 def asignarmesa(request):
-    return render(request, "core/mesas.html")
+    data = {
+        'variable_usuario': 'Trabajador'}
+    return render(request, "core/mesas.html", data)
 
 #Cocina
 def pedidos(request):
-    return render(request, "core/pedidos.html")
+    data = {
+        'variable_usuario': 'Trabajador'}
+    return render(request, "core/pedidos.html", data)
 
 def recetas(request):
-    return render(request, "core/recetas.html")
+    data = {
+        'variable_usuario': 'Trabajador'}
+    return render(request, "core/recetas.html", data)
 
 #Bodega
 def insumos(request):
+    data = {
+        'variable_usuario': 'Administrador'}
     return render(request, "core/insumos.html")
 
 #Finanzas
 def ganancias(request):
-    return render(request, "core/ganancias.html")
+    data = {
+        'variable_usuario': 'Administrador'}
+    return render(request, "core/ganancias.html", data)
 
 def boleta(request):
-    return render(request, "core/boletas.html")
+    data = {
+        'variable_usuario': 'Administrador'}
+    return render(request, "core/boletas.html", data)
+
+def formadmin(request):
+    data = {
+        'variable_usuario': 'Administrador'}
+    return render(request, "core/formularioadministrador.html", data)
+
+def formcliente(request):
+    data = {
+        'variable_usuario': 'Cliente'}
+    return render(request, "core/formulariocliente.html", data)
+
+def formtrabajador(request):
+    data = {
+        'variable_usuario': 'Trabajador'}
+    return render(request, "core/formulariotrabajador.html", data)
