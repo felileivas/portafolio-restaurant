@@ -49,18 +49,20 @@
     <script>
         function ValidarUser() {
             var valor = document.getElementById("inputEmail").value;
-            if (valor == '') {
+            if (valor == '' ) {
                 alert('Necesita Ingresar un usuario')
+                location.replace("{% url 'login' %}")
             };
             if (valor == 'admin@XXI.cl') {
-                location.replace("{% url 'boleta' %}")
+                location.replace("{% url 'formmesa' %}")
             };
             if (valor == 'cliente@XXI.cl') {
                 location.replace("{% url 'home' %}")
             };
             if (valor == 'trabajador@XXI.cl') {
-                location.replace("{% url 'asignarmesa' %}")
+                location.replace("{% url 'home' %}")
             };
+
         }
     </script>
     <!-- Optional JavaScript -->

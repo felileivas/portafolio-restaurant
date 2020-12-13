@@ -2,73 +2,68 @@ from django.contrib import admin
 
 from .models import Boleta, Cliente, Insumo, InsumoSolicitud, Mediopago, Menucategoria, Menuitem, Menuiteminsumo, Mesa, Pedido, Pedidomenuitem, Reserva, Roltrabajador, Solicitudinsumo, Trabajador
 
-admin.site.register(Boleta)
-admin.site.register(Cliente)
-admin.site.register(Insumo)
-admin.site.register(InsumoSolicitud)
-admin.site.register(Mediopago)
-admin.site.register(Menucategoria)
-admin.site.register(Menuitem)
-admin.site.register(Menuiteminsumo)
-admin.site.register(Mesa)
-admin.site.register(Pedido)
-admin.site.register(Pedidomenuitem)
-admin.site.register(Reserva)
-admin.site.register(Roltrabajador)
-admin.site.register(Solicitudinsumo)
-admin.site.register(Trabajador)
+class MesaAdmin(admin.ModelAdmin):
+        list_display = ('numeromesa','capacidad','sector','estado')
+        list_filter = ('sector','capacidad')
 
+class BoletaAdmin(admin.ModelAdmin):
+        list_display = ('montototal','id_mediopago','id_pedido')
 
+class ClienteAdmin(admin.ModelAdmin):
+        list_display = ('nombre','apellido','correo','contrasenna')
 
-# from .models import Usuario, Reserva, Receta, Preparacion, Pedido, Mesero, Mesa, Mediopago, Insumo, Boleta
+class InsumoAdmin(admin.ModelAdmin):
+        list_display = ('nombre','tipo','stock')
+        list_filter = ('tipo',)
 
-# # Register your models here.
+class InsumoSolicitudAdmin(admin.ModelAdmin):
+        list_display = ('id_insumo','cantidadsolicitada')
 
-# class BoletaAdmin(admin.ModelAdmin):
-#     list_display = ('id_boleta','fecha','mediopago_id_mediopago', 'pedido_id_pedido')
-#     date_hierarchy = 'fecha'
+class MediopagoAdmin(admin.ModelAdmin):
+        list_display = ('nombre',)
 
-# class RecetaAdmin(admin.ModelAdmin):
-#     list_display = ('id_receta','preparacion_id_preparacion','insumo_id_insumo')
-#     list_filter = ('preparacion_id_preparacion',)
+class MenucategoriaAdmin(admin.ModelAdmin):
+        list_display = ('nombre',)
+        list_filter = ('id_menucategoria',)
 
-# class MesaAdmin(admin.ModelAdmin):
-#     list_display = ('id_mesa','capacidad','sector')
-#     list_filter = ('sector','capacidad',)
+class MenuitemAdmin(admin.ModelAdmin):
+        list_display = ('nombre','precio','estado', 'id_menucategoria')
 
-# class InsumoAdmin(admin.ModelAdmin):
-#     list_display = ('id_insumo','nombre','tipo','cantidad')
-#     list_filter = ('tipo',)
+class MenuiteminsumoAdmin(admin.ModelAdmin):
+        list_display = ('id_insumo','cantidad','comentario')
 
-# class UsuarioAdmin(admin.ModelAdmin):
-#     list_display = ('id_usuario','nombre')
+class PedidoAdmin(admin.ModelAdmin):
+        list_display = ('fechapedido','numeromesa','id_trabajador','id_cliente')
 
-# class MeseroAdmin(admin.ModelAdmin):
-#     list_display = ('id_mesero','nombre')
+class PedidomenuitemAdmin(admin.ModelAdmin):
+        list_display = ('id_menuitem','cantidad','comentario')
 
-# class ReservaAdmin(admin.ModelAdmin):
-#     list_display = ('id_reserva','fecha', 'mesa_id_mesa', 'usuario_id_usuario')
-#     date_hierarchy = 'fecha'
+class ReservaAdmin(admin.ModelAdmin):
+        list_display = ('fechareserva','horareserva','numeromesa', 'estadoreserva','id_cliente')
 
-# class MedioPagoAdmin(admin.ModelAdmin):
-#     list_display = ('id_mediopago','nombre')
+class RoltrabajadorAdmin(admin.ModelAdmin):
+        list_display = ('descripcionrol',) 
 
-# class PedidosAdmin(admin.ModelAdmin):
-#     list_display = ('id_pedido','fecha','reserva_id_reserva')
-#     date_hierarchy = 'fecha'
+class SolicitudinsumoAdmin(admin.ModelAdmin):
+        list_display = ('fechasolicitud', 'estado', 'comentario', 'id_trabajador')
 
-# class PreparacionAdmin(admin.ModelAdmin):
-#     list_display = ('id_preparacion','nombre','precio')
-#     list_filter = ('precio',)
+class TrabajadorAdmin(admin.ModelAdmin):
+        list_display = ('nombre', 'apellido', 'correo', 'contrasenna', 'id_rol')
+        list_filter = ('id_rol',)
 
+admin.site.register(Boleta, BoletaAdmin)
+admin.site.register(Cliente, ClienteAdmin)
+admin.site.register(Insumo, InsumoAdmin)
+admin.site.register(InsumoSolicitud, InsumoSolicitudAdmin)
+admin.site.register(Mediopago, MediopagoAdmin)
+admin.site.register(Menucategoria, MenucategoriaAdmin)
+admin.site.register(Menuitem, MenuitemAdmin)
+admin.site.register(Menuiteminsumo, MenuiteminsumoAdmin)
+admin.site.register(Mesa, MesaAdmin)
+admin.site.register(Pedido, PedidoAdmin)
+admin.site.register(Pedidomenuitem, PedidomenuitemAdmin)
+admin.site.register(Reserva, ReservaAdmin)
+admin.site.register(Roltrabajador, RoltrabajadorAdmin)
+admin.site.register(Solicitudinsumo, SolicitudinsumoAdmin)
+admin.site.register(Trabajador, TrabajadorAdmin)
 
-# admin.site.register(Usuario, UsuarioAdmin)
-# admin.site.register(Reserva,ReservaAdmin)
-# admin.site.register(Receta,RecetaAdmin)
-# admin.site.register(Preparacion,PreparacionAdmin)
-# admin.site.register(Pedido,PedidosAdmin)
-# admin.site.register(Mesero,MeseroAdmin)
-# admin.site.register(Mesa,MesaAdmin)
-# admin.site.register(Mediopago,MedioPagoAdmin)
-# admin.site.register(Insumo, InsumoAdmin)
-# admin.site.register(Boleta,BoletaAdmin)

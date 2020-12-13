@@ -15,8 +15,17 @@
             <br>
             <p id="description">Registro Cliente</p>
         </div>
+
         <div class="card-body">
-            <form action="" method="GET" id="survey-form">
+
+        
+    <h2>Nuevo Cliente</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+            <!-- <form action="" method="GET" id="survey-form">
                 <div class="form-group">
                     <label id="name-label" for="exampleNombre">Nombre:</label>
                     <input autofocus type="text" name="name" id="name" class="input-field form-control" placeholder="Ingresa nombre completo"
@@ -34,14 +43,16 @@
                     <small class="form-text text-muted">Ingresa tu contraseña aquí.</small>
                     <br>
 
-                    <!-- <label id="password-label" for="password">Repite Contraseña:</label>
+                    <label id="password-label" for="password">Repite Contraseña:</label>
                     <input type="email" class="input-field form-control" id="email" placeholder="Repite contraseña"
                         required>
                     <small class="form-text text-muted">Repite tu contraseña aquí.</small>
-                    <br> -->
+                    <br> 
 
                     <a id="submit" href="#" type="submit" class="btn btn-primary">Registrar</a>
-            </form>
+                    -->
+            </form> 
+
         </div>
     </div>
 </div>

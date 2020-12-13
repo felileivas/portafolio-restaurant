@@ -3,7 +3,32 @@
 
 {% block content %}
 
-<h2> Prueba de contenido </h2>
+
+    <div class="offset-md-2 col-md-8 offset-md-2">
+
+    <title>Formulario Cliente</title>
+    <h5><center>Restaurant SIGLO XXI</center></h5>
+    <br>
+    <h1 id="title" class="text-center">Formulario Boleta</h1>
+    <div class="card">
+        <div class="card-header">
+            <br>
+            <p id="description">Registro Cliente</p>
+        </div>
+
+        <div class="card-body">
+
+        
+    <h2>Nueva Boleta</h2>
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}
 

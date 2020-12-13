@@ -1,11 +1,8 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
-{% block content %}
 
-
-
-<div class="offset-md-2 col-md-8 offset-md-2">
+<!-- <div class="offset-md-2 col-md-8 offset-md-2">
     <title>Formulario Cliente</title>
     <h5><center>Restaurant SIGLO XXI</center></h5>
     <br>
@@ -43,9 +40,17 @@
         </div>
     </div>
 </div>
+ -->
 
-
+ {% block content %}
+    <h2>Nuevo Trabajador</h2>
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
 {% endblock %}
+
 
 
 

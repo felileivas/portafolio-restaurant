@@ -25,8 +25,7 @@ SECRET_KEY = '0w9no+*l0w!k*7tntp+gd_))zk@joia7i*c-^x@vz^6bl3nb26'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['2bbfee57ae80.ngrok.io', '127.0.0.1']
-
+ALLOWED_HOSTS = ['2bbfee57ae80.ngrok.io', '127.0.0.1', 'd14eed56d4ec.sa.ngrok.io', 'localhost']
 
 # Application definition
 
@@ -38,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core.apps.CoreConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

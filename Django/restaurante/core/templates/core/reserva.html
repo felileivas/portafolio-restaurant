@@ -5,6 +5,18 @@
 
 <h2> Prueba de contenido </h2>
 
+{% for mesa in mesas %}
+
+    <div>
+        <p> Numero de mesa: {{ mesa.numeromesa }}</p>
+        <p> Capacidad: {{ mesa.capacidad }}</p>
+        <p> Sector: {{ mesa.sector }}</p>
+    </div>
+
+{% endfor %}
+
+<!-- Formulario para solicitar mesa -->
+
 {% endblock %}
 
 {{ variable_usuario }}

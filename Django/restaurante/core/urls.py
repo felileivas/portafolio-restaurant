@@ -7,13 +7,27 @@ urlpatterns = [
     path('reserva/', views.reserva, name="reserva"),
     path('pagar/', views.pagar, name="pagar"),
     path('pedirorden/', views.pedirorden, name="pedirorden"),
-    path('asignarmesa/', views.asignarmesa, name="asignarmesa"),
+    path('mesa/new', views.formmesa, name="formmesa"),
     path('pedidos/', views.pedidos, name="pedidos"),
     path('recetas/', views.recetas, name="recetas"),
     path('insumos/', views.insumos, name="insumos"),
     path('ganancias/', views.ganancias, name="ganancias"),
-    path('boleta/', views.boleta, name="boleta"),
+    path('boleta/new/', views.formularioBoleta, name="formularioBoleta"),
     path('administrador/', views.formadmin, name="formadmin"),
-    path('cliente/', views.formcliente, name="formcliente"),
-    path('trabajador/', views.formtrabajador, name="formtrabajador"),
+    path('cliente/new/', views.formcliente, name="formcliente"),
+    path('trabajador/new/', views.formtrabajador, name="formtrabajador"),
+
+
 ]
+
+#Cliente.objects.all()
+#Cliente.objects.create(nombre='test', apellido='test', correo='test@test.cl', contrasenna='test' )
+#Cliente.objects.get(correo='test@test.cl')
+#Cliente.objects.filter(correo='test@test.cl')
+
+######################
+
+#Trabajador.objects.all()
+#Trabajador.objects.create(nombre='test', apellido='test', correo='test@test.cl', contrasenna='test', id_rol= '1')
+#Trabajador.objects.get(correo='test@test.cl')
+#Trabajador.objects.filter(correo='test@test.cl')
