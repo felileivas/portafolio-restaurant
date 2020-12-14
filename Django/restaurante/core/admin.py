@@ -37,6 +37,7 @@ class PedidoAdmin(admin.ModelAdmin):
 
 class PedidomenuitemAdmin(admin.ModelAdmin):
         list_display = ('id_menuitem','cantidad','comentario')
+        list_filter = ('id_pedido',)
 
 class ReservaAdmin(admin.ModelAdmin):
         list_display = ('fechareserva','horareserva','numeromesa', 'estadoreserva','id_cliente')

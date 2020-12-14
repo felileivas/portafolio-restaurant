@@ -3,7 +3,91 @@
 
 {% block content %}
 
-<h2> Prueba de contenido </h2>
+
+
+
+<div class="card">
+    <div class="card-header">
+      Revisa tus reservas para hacer un pedido
+    </div>
+    <div class="card-body table-responsive">
+        <table class="table ">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Fecha de Reserva</th>
+                <th scope="col">Hora de Reserva</th>
+                <th scope="col">Numero de Mesa</th>
+                <th scope="col">Pedir platos</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for reserv in reservas %}
+              <tr>
+                <th scope="row">{{ reserv.fechareserva }}</th>
+                <td>{{ reserv.horareserva }}</td>
+                <td>{{ reserv.numeromesa }}</td>
+                <td><button id="pedidoForm" type="button" class="btn btn-success" value="{{reserv.id_reserva}}" onclick="myNumeroReserva(this)" data-toggle="modal" data-target="#staticBackdrop">Comenzar Reserva</button></td>
+                <!-- <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#staticBackdrop" id="numeroMesa" name="mesa" value="{{mesa.numeromesa}}"">Comenzar Reserva</button></td>
+               -->
+        </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Pedido numero <div id="mesanumero"></div></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {% for plato in menuItem %}
+            <form method="POST">
+                {% csrf_token %}
+                <input class="form-control" type="text" id="reservaForm" name="reservaForm" hidden>
+                <div class="col-lg-4 mt-2">
+                    <div class="card d-flex" style="width: 18rem;">
+                        <img class="thumbnail" src="{% static 'core/files/img4.jpg'%}">
+                        <div class="card-body">
+                                <input class="form-control" type="text" id="pedidoForm" name="pedidoForm" hidden>
+                            <div class="box-element product">
+                                <h6><strong>{{plato.nombre}}</strong></h6>
+                                <hr>
+                                <button type="button" id="añadirProducto" name="btnform1" data-product="{{plato.id_menuitem}}" class="btn btn-outline-secondary add-btn update-cart">Seleccionar Producto</button>
+                                <h4 style="display: inline-block; float: right;"><strong>${{plato.precio}}</strong></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <form>
+        {% endfor %}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button name="btnform2" type="submit" class="btn btn-primary">Enviar orden</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+        function myNumeroReserva(numero){
+          // var x = document.getElementById("numeroMesa").value;
+          document.getElementById("reservaForm").value = numero.value;
+          // document.getElementById("pedidoForm").value = numero.value;
+          // document.getElementById('mesanumero').innerHTML = numero.value;
+        }
+</script>
 
 {% endblock %}
 

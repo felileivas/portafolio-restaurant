@@ -49,7 +49,7 @@ class Insumo(models.Model):
 
 class InsumoSolicitud(models.Model):
     id_solicitud = models.OneToOneField(
-        'Solicitudinsumo', models.DO_NOTHING, db_column='id_solicitud', primary_key=True)
+        'Solicitudinsumo', models.DO_NOTHING,primary_key=True, db_column='id_solicitud')
     id_insumo = models.ForeignKey(
         Insumo, models.DO_NOTHING, db_column='id_insumo', verbose_name='Insumo')
     cantidadsolicitada = models.FloatField()
@@ -75,7 +75,7 @@ class Mediopago(models.Model):
         verbose_name = 'Medio de Pago'
         verbose_name_plural = 'Medios de Pago'
     def __str__(self):
-        return '{} {}'.format(self.id_mediopago, self.nombre)
+        return '{}'.format(self.nombre)
 
 
 class Menucategoria(models.Model):
@@ -110,7 +110,7 @@ class Menuitem(models.Model):
 
 class Menuiteminsumo(models.Model):
     id_menuitem = models.OneToOneField(
-        Menuitem, models.DO_NOTHING, db_column='id_menuitem', primary_key=True, verbose_name='Nombre de la preparacion de la receta')
+        Menuitem, models.DO_NOTHING, db_column='id_menuitem',primary_key=True, verbose_name='Nombre de la preparacion de la receta')
     id_insumo = models.ForeignKey(
         Insumo, models.DO_NOTHING, db_column='id_insumo', verbose_name='Insumo')
     cantidad = models.FloatField()
@@ -139,7 +139,7 @@ class Mesa(models.Model):
         verbose_name_plural = 'Mesas'
 
     def __str__(self):
-        return '{} {} {}'.format(self.numeromesa, self.capacidad, self.sector)
+        return 'Numero mesa: {} - {}'.format(self.numeromesa, self.sector)
 
 
 
@@ -159,12 +159,12 @@ class Pedido(models.Model):
         verbose_name = 'Pedido'
         verbose_name_plural = 'Pedidos'
     def __str__(self):
-        return '{} {} {} {} {}'.format(self.id_pedido, self.fechapedido, self.numeromesa, self.id_trabajador, self.id_cliente)
+        return '{} - {} ({})'.format(self.id_pedido, self.id_cliente, self.fechapedido)
 
 
 class Pedidomenuitem(models.Model):
     id_pedido = models.OneToOneField(
-        Pedido, models.DO_NOTHING, db_column='id_pedido', primary_key=True)
+        Pedido, models.DO_NOTHING, db_column='id_pedido',primary_key=True)
     id_menuitem = models.ForeignKey(
         Menuitem, models.DO_NOTHING, db_column='id_menuitem', verbose_name='Item del Menú')
     cantidad = models.FloatField()
@@ -247,4 +247,4 @@ class Trabajador(models.Model):
         verbose_name_plural = 'Trabajadores'
 
     def __str__(self):
-        return '{} {} {} {}'.format(self.id_trabajador, self.nombre, self.apellido, self.id_rol)
+        return '{} - {}'.format(self.nombre, self.id_rol)

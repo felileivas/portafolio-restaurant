@@ -3,19 +3,93 @@
 
 {% block content %}
 
-<h2> Prueba de contenido </h2>
+<h2> Reservar una mesa </h2>
 
-{% for mesa in mesas %}
+<div class="card">
+    <div class="card-header">
+      Revisa las mesas disponibles
+    </div>
+    <div class="card-body table-responsive">
 
-    <div>
-        <p> Numero de mesa: {{ mesa.numeromesa }}</p>
-        <p> Capacidad: {{ mesa.capacidad }}</p>
-        <p> Sector: {{ mesa.sector }}</p>
+        <table class="table ">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Numero de mesa</th>
+                <th scope="col">Capacidad</th>
+                <th scope="col">Sector</th>
+                <th scope="col">Reservar</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for mesa in mesas %}
+              <tr>
+                <th scope="row">{{ mesa.numeromesa }}</th>
+                <td>{{ mesa.capacidad }}</td>
+                <td>{{ mesa.sector }}</td>
+                <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id="numeroMesa" name="mesa" value="{{mesa.numeromesa}}" onclick="myNumeroMesa(this)">Reservar Mesa</button></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</div>
+
+    <!-- Formulario para solicitar mesa -->
+
+  <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Reservando mesa <div id="mesanumero"></div></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+              <form name="datosRegistro" method="POST" action="{% url 'reserva' %}" >
+                {% csrf_token %}
+                <!-- Formulario de reserva -->
+                <div class="modal-body">
+                    <input class="form-control" type="text" id="mesaForm" name="mesaForm" hidden>
+                    <br>
+                    <label for="start">Fecha de Reserva:</label>
+                    <!-- formatear fecha actual para tomarla como validacion -->
+                    {% now "Y-m-d" as current_date %}
+                    <input class="form-control" type="date" id="fecha" name="fecha" min="{{current_date}}" max="2020-12-31">
+                    <br>
+                    <label for="select">Selecciona la hora de la reservar:</label>
+                    <select id="hora" class="form-control" name="hora">
+                        <option disabled value>Elige una opcion:</option>
+                        <option value="13">13:00-14:00</option>
+                        <option value="14">14:00-15:00</option>
+                        <option value="15">15:00-16:00</option>
+                        <option value="16">16:00-17:00</option>
+                        <option value="17">17:00-18:00</option>
+                        <option value="18">18:00-19:00</option>
+                        <option value="19">19:00-20:00</option>
+                        <option value="20">20:00-21:00</option>
+                    </select>
+                    <small class="form-text text-muted">Solo selecciona un interes.</small>
+                    <br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Hacer Reserva</button>
+                </div>
+              </form>
+            </div>
+        </div>
     </div>
 
-{% endfor %}
 
-<!-- Formulario para solicitar mesa -->
+<script type="text/javascript">
+  function myNumeroMesa(numero){
+    // var x = document.getElementById("numeroMesa").value;
+    // alert(numero.value);
+    document.getElementById("mesaForm").value = numero.value;
+    document.getElementById('mesanumero').innerHTML = numero.value;
+  }
+</script>
 
 {% endblock %}
 

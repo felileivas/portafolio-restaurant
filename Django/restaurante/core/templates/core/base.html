@@ -27,18 +27,19 @@
   <link rel="stylesheet" href="{% static 'core/css/navbar-fixed-left.css' %}" />
 
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
-  
 
+  <link rel="icon" href="https://img.icons8.com/nolan/64/restaurant.png">
+ 
   <title>Home</title>
 
 
   {% block styles %} {% endblock %}
 </head>
 
-<body style="background-color: #94CAF7;">
+<body style=" background-image: linear-gradient(rgb(156, 37, 37), yellow)">
   <nav class="navbar navbar-expand-md navbar-light bg-primary fixed-left" style="background-color: #fff !important">
-    <a class="navbar-brand" href="/mainAdmin/home" style="font-size: 14px">
-      <img src="https://img.icons8.com/plasticine/100/000000/pay-date.png" width="20" height="20"
+    <a class="navbar-brand" href="/" style="font-size: 14px">
+      <img src="https://img.icons8.com/nolan/64/restaurant.png" width="20" height="20"
         class="d-inline-block align-cennter" alt="" />
       Restaurant Siglo XXI
     </a>
@@ -52,7 +53,7 @@
       <ul class="navbar-nav mr-auto">
         <div class="card">
           <li class="nav-item {% if request.path == '/' %}active font-weight-bold{% endif %}">
-            <a class="nav-link" href="{% url 'home' %}"><img src="{% static 'core/files/internet.png' %}" height="15px"
+            <a class="nav-link" href="{% url 'home' %}"><img src="https://img.icons8.com/nolan/64/home.png" height="15px"
                 class="pr-2" alt="" />Pagina Principal</a>
           </li>
         </div>
@@ -61,7 +62,7 @@
         <div id="accordion">
           <div class="card">
             <a class="nav-link dropdown-toggle {% if request.path == '/cliente/' %}active font-weight-bold{% endif %}{% if request.path == '/reserva/' %}active font-weight-bold{% endif %}{% if request.path == '/pagar/' %}active font-weight-bold{% endif %}{% if request.path == '/pedirorden/' %}active font-weight-bold{% endif %}"
-              data-toggle="collapse" data-target="#collapse1"><img src="{% static 'core/files/documento.png' %}"
+              data-toggle="collapse" data-target="#collapse1"><img src="https://img.icons8.com/nolan/64/document.png"
                 height="15px" class="pr-2" alt="" />Cliente</a>
             <div id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="card-body">
